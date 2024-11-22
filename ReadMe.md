@@ -10,7 +10,7 @@
 - **Page Layout**  
   - The max width for all content on the desktop version is **1170px**. 
   - The Width that the website is going to the mobile version is **1024px**. 
-  - Center your page content and use `max-width: 1170px` to keep everything consistent.  
+  - Center your page content and use `width: 1170px` to keep everything consistent.  
 
 - **Colors**  
   - I’ve set up most of the colors as CSS variables. To use them, just write:  
