@@ -4,7 +4,7 @@
 # Raksa Notes: 22/11/2024
 
 - **Navbar and Footer**  
-  - I’ve already made the navbar and footer, and they’re applied to all pages.  
+  - I’ve already made the navbar and footer, and they’re applied to all pages and it works.
   - For your page, just focus on the main content — no need to worry about the navbar or footer.  
 
 - **Page Layout**  
@@ -14,7 +14,7 @@
 
 - **Colors**  
   - I’ve set up most of the colors as CSS variables. To use them, just write:  
-    `color: var(--yellow); /* This matches McDonald's yellow perfectly */`  
+    `color: var(--yellow); /* This matches McDonald's yellow perfectly */`  or just use your own its fine but for the yellow u should use it.
 
 - **Images**  
   - Create an `images` folder inside your page folder.  
