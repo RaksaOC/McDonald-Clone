@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>McDonald's - Search</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="search.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="nav-bar-wrapper">
+        <div class="logo">
+          <a href="../Home/home.html"
+            ><img src="../Nav-Images/logo.png" alt=""
+          /></a>
+          <img src="../Nav-Images/menu.png" alt="" />
+        </div>
+        <div class="nav-links">
+          <div class="nav-links-top">
+            <div class="nav-links-top-left">
+              <div class="dropdown language-dropdown">
+                <button
+                  class="language-btn btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Language
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">English</a></li>
+                  <li><a class="dropdown-item" href="#">Español</a></li>
+                </ul>
+              </div>
+              <div class="sign-up">
+                <a href="../Sign-Up/signup.html">Sign up for Email</a>
+              </div>
+              <div class="career">
+                <a href="../Careers/careers.html">Careers</a>
+              </div>
+            </div>
+            <div class="nav-links-top-right">
+              <a href="../Search/search.html" class="search">
+                <img src="../Nav-Images/search.png" alt="serach icon" />
+                <p>Search</p>
+              </a>
+              <a href="../Locate/locate.html" class="find-location">
+                <img src="../Nav-Images/location.png" alt="location icon" />
+                <p>Find Your Restaurant</p>
+              </a>
+              <div class="order">
+                <button class="order-btn">Order Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="nav-links-bottom">
+            <div class="menu">
+              <div class="dropdown language-dropdown">
+                <button
+                  class="language-btn btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Our Menu
+                </button>
+                <div class="dropdown-menu dropdown-menu-menu">
+                  <div class="menu-dropdown-menu-wrapper">
+                    <div class="menu-item-wrapper">
+                      <div class="menu-item">
+                        <img src="../Nav-Images/mealDeals.png" alt="" />
+                        <p>Meal Deals</p>
+                      </div>
+                      <div class="menu-item">
+                        <img src="../Nav-Images/mcNuggets.png" alt="" />
+                        <p>McNuggets®</p>
+                      </div>
+                      <div class="menu-item">
+                        <img src="../Nav-Images/mcCoffee.png" alt="" />
+                        <p>McCafé <sup>®</sup> Coffees</p>
+                      </div>
+                      <div class="menu-item">
+                        <img src="../Nav-Images/breakfast.png" alt="" />
+                        <p>Breakfast</p>
+                      </div>
+                      <div class="menu-item">
+                        <img src="../Nav-Images/fries.png" alt="" />
+                        <p>Fries & Sides</p>
+                      </div>
+                      <div class="menu-item">
+                        <img src="../Nav-Images/beverages.png" alt="" />
+                        <p>Beverages</p>
+                      </div>
+                      <div class="menu-item">
+                        <img src="../Nav-Images/burgers.png" alt="" />
+                        <p>Burgers</p>
+                      </div>
+                      <div class="menu-item">
+                        <img src="../Nav-Images/happy-meal.png" alt="" />
+                        <p>Happy Meal <sup>®</sup></p>
+                      </div>
+                      <div class="menu-item">
+                        <img src="../Nav-Images/dollar-menu.png" alt="" />
+                        <p>$1 $2 $3 Dollar Menu*</p>
+                      </div>
+                      <div class="menu-item">
+                        <img src="../Nav-Images/chicken-fish-sw.png" alt="" />
+                        <p>Chicken & Fish Sandwiches</p>
+                      </div>
+                      <div class="menu-item">
+                        <img src="../Nav-Images/sweets.png" alt="" />
+                        <p>Sweets & Treats</p>
+                      </div>
+                    </div>
+                    <div class="full-menu-btn">
+                      <button>View Full Menu</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="download">
+              <a href="../Download-App/download-app.html">Download App</a>
+            </div>
+            <div class="rewards">
+              <a href="../Reward/reward.html"> MyMcDonald's Rewards </a>
+            </div>
+            <div class="deals">
+              <a href="../Deals/deals.html"> Exclusive Deals </a>
+            </div>
+            <div class="about">
+              <a href="../About/about.html"> About Our Food </a>
+            </div>
+            <div class="delivery">
+              <a href="../McDelivery/mcdelivery.html"> McDelivery </a>
+            </div>
+            <div class="locate">
+              <a href="../Locate/locate.html"> Locate </a>
+            </div>
+            <div class="gift-card">
+              <a href="../Gift-Cards/gift-cards.html"> Gift Cards </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Content -->
+    <footer class="footer">
+      <div class="footer-links-wrapper">
+        <div class="footer-links">
+          <div class="footer-about">
+            <b>About Us</b>
+            <br />
+            <br />
+            <ul class="footer-about-links">
+              <li><a href="#">About Us Overview</a></li>
+              <li><a href="#">Leadership Team</a></li>
+              <li><a href="#">Values In Action</a></li>
+              <li><a href="#">Franchising Info</a></li>
+              <li><a href="#">Recalls & Alerts</a></li>
+              <li><a href="#">Real Estate</a></li>
+              <li><a href="#">Accessibility</a></li>
+              <li><a href="#">Investor Relations</a></li>
+              <li><a href="#">News & Notifications</a></li>
+            </ul>
+          </div>
+          <div class="footer-services">
+            <b>Services</b>
+            <br />
+            <br />
+            <ul class="footer-services-links">
+              <li><a href="#">Services Overview</a></li>
+              <li><a href="#">Delivery Partners</a></li>
+              <li><a href="#">Wi-Fi</a></li>
+              <li><a href="#">PlayPlaces & Parties</a></li>
+              <li><a href="#">Mobile Order & Pay</a></li>
+              <li><a href="#">Trending Now</a></li>
+              <li><a href="#">McDonald’s Merchandise</a></li>
+              <li><a href="#">Family Fun Hub</a></li>
+              <li><a href="#">MyMcDonald's Rewards</a></li>
+              <li><a href="#">McCafé®</a></li>
+            </ul>
+          </div>
+          <div class="footer-community">
+            <b>Community</b>
+            <br />
+            <br />
+            <ul class="footer-community-links">
+              <li><a href="#">Community Overview</a></li>
+              <li><a href="#">Now Serving</a></li>
+              <li><a href="#">Scholarship Overview</a></li>
+              <li><a href="#">HACER® Scholarships for Hispanic Students</a></li>
+              <li><a href="#">McDonald’s Asian Pacific American</a></li>
+              <li><a href="#">Black and Positively Golden</a></li>
+              <li><a href="#">Ronald McDonald House Charities®</a></li>
+              <li><a href="#">McDonald’s International</a></li>
+              <li><a href="#">McDonald’s LGBTQ+</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <b>Contact Us</b>
+            <br />
+            <br />
+            <ul class="footer-contact-links">
+              <li><a href="#">Contact Us Overview</a></li>
+              <li><a href="#">Gift Card FAQs</a></li>
+              <li><a href="#">Donations</a></li>
+              <li><a href="#">Employment</a></li>
+              <li><a href="#">Customer Feedback</a></li>
+              <li><a href="#">Frequently Asked Questions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                About Us
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <ul class="footer-about-links">
+                  <li><a href="#">About Us Overview</a></li>
+                  <li><a href="#">Leadership Team</a></li>
+                  <li><a href="#">Values In Action</a></li>
+                  <li><a href="#">Franchising Info</a></li>
+                  <li><a href="#">Recalls & Alerts</a></li>
+                  <li><a href="#">Real Estate</a></li>
+                  <li><a href="#">Accessibility</a></li>
+                  <li><a href="#">Investor Relations</a></li>
+                  <li><a href="#">News & Notifications</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                Services
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingTwo"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <ul class="footer-services-links">
+                  <li><a href="#">Services Overview</a></li>
+                  <li><a href="#">Delivery Partners</a></li>
+                  <li><a href="#">Wi-Fi</a></li>
+                  <li><a href="#">PlayPlaces & Parties</a></li>
+                  <li><a href="#">Mobile Order & Pay</a></li>
+                  <li><a href="#">Trending Now</a></li>
+                  <li><a href="#">McDonald’s Merchandise</a></li>
+                  <li><a href="#">Family Fun Hub</a></li>
+                  <li><a href="#">MyMcDonald's Rewards</a></li>
+                  <li><a href="#">McCafé®</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                Community
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <ul class="footer-community-links">
+                  <li><a href="#">Community Overview</a></li>
+                  <li><a href="#">Now Serving</a></li>
+                  <li><a href="#">Scholarship Overview</a></li>
+                  <li>
+                    <a href="#">HACER® Scholarships for Hispanic Students</a>
+                  </li>
+                  <li><a href="#">McDonald’s Asian Pacific American</a></li>
+                  <li><a href="#">Black and Positively Golden</a></li>
+                  <li><a href="#">Ronald McDonald House Charities®</a></li>
+                  <li><a href="#">McDonald’s International</a></li>
+                  <li><a href="#">McDonald’s LGBTQ+</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFour"
+                aria-expanded="false"
+                aria-controls="flush-collapseFour"
+              >
+                Contact Us
+              </button>
+            </h2>
+            <div
+              id="flush-collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingFour"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <ul class="footer-contact-links">
+                  <li><a href="#">Contact Us Overview</a></li>
+                  <li><a href="#">Gift Card FAQs</a></li>
+                  <li><a href="#">Donations</a></li>
+                  <li><a href="#">Employment</a></li>
+                  <li><a href="#">Customer Feedback</a></li>
+                  <li><a href="#">Frequently Asked Questions</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-social-wrapper">
+          <div class="footer-social-links">
+            <a href="#" class="footer-social-item">
+              <img src="../Nav-Images/facebook.png" alt="" />
+            </a>
+            <a href="#" class="footer-social-item">
+              <img src="../Nav-Images/twitter.png" alt="" />
+            </a>
+            <a href="#" class="footer-social-item">
+              <img src="../Nav-Images/youtube.png" alt="" />
+            </a>
+            <a href="#" class="footer-social-item">
+              <img src="../Nav-Images/insta.png" alt="" />
+            </a>
+            <a href="#" class="footer-social-item">
+              <img src="../Nav-Images/tumblr.png" alt="" />
+            </a>
+            <a href="#" class="footer-social-item">
+              <img src="../Nav-Images/spotify.png" alt="" />
+            </a>
+          </div>
+          <div class="footer-download-app">
+            <a href="">
+              <img src="../Nav-Images/download-ios.png" alt="" />
+            </a>
+            <a href="">
+              <img src="../Nav-Images/download-android.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-final">
+          <div class="privacy">
+            <a href="#">Privacy(Updated)</a>
+            <a href="#">California Privacy Notice</a>
+            <a href="#">Consumer Health Data</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Do Not Sell or Share My Personal Information</a>
+            <a href="#">Cookie Settings</a>
+          </div>
+          <div class="rights-img">
+            <img src="../Nav-Images/logo.png" alt="" />
+          </div>
+          <div class="rights">
+            <img src="../Nav-Images/logo.png" alt="" />
+            <p>© 2017 - 2024 McDonald's. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
