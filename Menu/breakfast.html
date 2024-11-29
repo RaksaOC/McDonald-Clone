@@ -10,6 +10,162 @@
 <html lang="en">
   <head>
     <style>
+            #content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    width: 1170px;
+}
+#top-bar{
+    margin-top: 100px;
+    display: flex;
+}
+#top-bar a{
+    text-decoration: none;
+    color: black;
+}
+#top-bar{
+    width: 100%;
+}
+#sidebar{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 25%;
+}
+#sidebar a{
+    display: flex;
+}
+#sidebar p{
+    margin: 0;
+    align-self: center;
+    font-size: 1rem;
+    margin-left: 15px;
+    font-weight: 500;
+}
+#side a:nth-of-type(2):before{
+    content: " ";
+    background-color: rgb(215, 0, 0);
+    width: 5px;
+    height: 10%;
+    position: absolute;
+    left: 0;
+}
+#feature-favorite{
+    overflow: hidden;
+    border: 1px solid gray;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+}
+#feature-favorite img{
+    width: 80px;
+}
+#feature-grid > a > p{
+    font-weight: 500!important;
+    font-size: 1rem!important;
+}
+#feature-grid>a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#feature-grid>a>img{
+    width: 150px;
+}
+#feature-menu{
+    width: 75%;
+}
+#feature-menu p:nth-child(1){
+    margin: 0;
+    height: 5%;
+    justify-self: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+#feature-menu p:nth-child(2){
+    margin: 0;
+    height: 5%;
+    justify-self: center;
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+#side{
+  position: relative;
+    border: 1px solid gray;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+}
+#side img{
+    width: 80px;
+    height: 80px;
+}
+#feature-grid{
+    text-align: center;
+    height: 85%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 300px;
+}
+#some-random-text-at-the-bottom p:nth-child(2){
+    margin-bottom: 50px;
+    font-size: 0.5rem;
+    font-weight: 500;
+}
+#some-random-text-at-the-bottom p:nth-child(1){
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+#ads{
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#ads div{
+    border: 1px solid gray;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 30%;
+}
+#ads img{
+    width: 100%;
+}
+#ads>div p:nth-of-type(1){
+    font-weight: bold;
+    font-size: 1.375rem;
+    margin: 15px;
+    height: 15%;
+}
+#ads>div p:nth-of-type(2){
+    margin: 15px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    height: 15%;
+}
+#ads>div p:nth-of-type(3){
+    margin: 15px;
+    font-size: 0.675rem;
+    font-weight: 500;
+}
+#ads button{
+    margin: 15px;
+    background-color: #FFC72C;
+    border: none;
+    border-radius: 5px;
+    height: 45px;
+    padding: 10px;
+}
+#important-note{
+    padding-top: 100px;
+    font-size: 0.625rem;
+    font-weight: 500;
+}
       #hidden-menu{
         display: none;
       }
@@ -368,170 +524,16 @@ img{
     display: none;
 }
 
-      #content-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#container{
-    display: flex;
-    flex-direction: column;
-    width: 1170px;
-}
-#top-bar{
-    margin-top: 100px;
-    display: flex;
-}
-#top-bar a{
-    text-decoration: none;
-    color: black;
-}
-#top-bar{
-    width: 100%;
-}
-#sidebar{
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    width: 25%;
-}
-#sidebar a{
-    display: flex;
-}
-#sidebar p{
-    margin: 0;
-    align-self: center;
-    font-size: 1rem;
-    margin-left: 15px;
-    font-weight: 500;
-}
-#side a:nth-of-type(2):before{
-    content: " ";
-    background-color: rgb(215, 0, 0);
-    width: 5px;
-    height: 10%;
-    position: absolute;
-    left: 0;
-}
-#feature-favorite{
-    overflow: hidden;
-    border: 1px solid gray;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 5px;
-}
-#feature-favorite img{
-    width: 80px;
-}
-#feature-grid > a > p{
-    font-weight: 500!important;
-    font-size: 1rem!important;
-}
-#feature-grid>a{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#feature-grid>a>img{
-    width: 150px;
-}
-#feature-menu{
-    width: 75%;
-}
-#feature-menu p:nth-child(1){
-    margin: 0;
-    height: 5%;
-    justify-self: center;
-    font-size: 3rem;
-    font-weight: bold;
-}
-#feature-menu p:nth-child(2){
-    margin: 0;
-    height: 5%;
-    justify-self: center;
-    font-size: 2.25rem;
-    font-weight: bold;
-}
-#side{
-  position: relative;
-    border: 1px solid gray;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 5px;
-}
-#side img{
-    width: 80px;
-    height: 80px;
-}
-#feature-grid{
-    text-align: center;
-    height: 85%;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-auto-rows: 300px;
-}
-#some-random-text-at-the-bottom p:nth-child(2){
-    margin-bottom: 50px;
-    font-size: 0.5rem;
-    font-weight: 500;
-}
-#some-random-text-at-the-bottom p:nth-child(1){
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-#ads{
-    height: 500px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-#ads div{
-    border: 1px solid gray;
-    border-radius: 5px;
-    overflow: hidden;
-    width: 30%;
-}
-#ads img{
-    width: 100%;
-}
-#ads>div p:nth-of-type(1){
-    font-weight: bold;
-    font-size: 1.375rem;
-    margin: 15px;
-    height: 15%;
-}
-#ads>div p:nth-of-type(2){
-    margin: 15px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    height: 15%;
-}
-#ads>div p:nth-of-type(3){
-    margin: 15px;
-    font-size: 0.675rem;
-    font-weight: 500;
-}
-#ads button{
-    margin: 15px;
-    background-color: #FFC72C;
-    border: none;
-    border-radius: 5px;
-    height: 45px;
-    padding: 10px;
-}
-#important-note{
-    padding-top: 100px;
-    font-size: 0.625rem;
-    font-weight: 500;
-}
+
 @media (max-width: 1200px){
-   #container{
+  #container{
     width: 90%;
    }
    
+   
 }
 @media (max-width: 1024px){
-    #top-bar{
+  #top-bar{
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -580,6 +582,7 @@ img{
     grid-template-columns: repeat(2,1fr);
     grid-auto-rows: 300px;
     }
+    
     .nav-bar{
         padding:5px;
     }
@@ -812,6 +815,7 @@ img{
         </div>
       </div>
     </nav>
+    <a href="menu.html" style="padding-left: 10px; font-size: 0.875rem;">< View Full Menu</a>
     <div id="content-container">
       <div id="container">
         <div id="top-bar">
@@ -830,7 +834,7 @@ img{
               </a>
               <a href="breakfast.html">
                 <img src="https://s7d1.scene7.com/is/image/mcdonalds/breakfast_300x300:category-panel-left-desktop" alt="">
-                <p>Breakfast</p>
+                <p><b>Breakfast</b></p>
               </a>
               <a href="burger.html">
                 <img src="https://s7d1.scene7.com/is/image/mcdonalds/LeftRail_BurgersPCP_160x160:category-panel-left-desktop" alt="">
@@ -866,7 +870,7 @@ img{
               </a>
               <a href="dollar.html">
                 <img src="https://s7d1.scene7.com/is/image/mcdonalds/D123_160x160:category-panel-left-desktop" alt="">
-                <p>$1 $2 $3 Dollar Menu®</p>
+                <p>$1 $2 $3 Dollar Menu*</p>
               </a>
             </nav>
           </div>
