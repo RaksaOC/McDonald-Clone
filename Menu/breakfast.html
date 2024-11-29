@@ -1,1266 +1,1435 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
   <head>
-    <style>
-            #content-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#container{
-    display: flex;
-    flex-direction: column;
-    width: 1170px;
-}
-#top-bar{
-    margin-top: 100px;
-    display: flex;
-}
-#top-bar a{
-    text-decoration: none;
-    color: black;
-}
-#top-bar{
-    width: 100%;
-}
-#sidebar{
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    width: 25%;
-}
-#sidebar a{
-    display: flex;
-}
-#sidebar p{
-    margin: 0;
-    align-self: center;
-    font-size: 1rem;
-    margin-left: 15px;
-    font-weight: 500;
-}
-#side a:nth-of-type(2):before{
-    content: " ";
-    background-color: rgb(215, 0, 0);
-    width: 5px;
-    height: 10%;
-    position: absolute;
-    left: 0;
-}
-#feature-favorite{
-    overflow: hidden;
-    border: 1px solid gray;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 5px;
-}
-#feature-favorite img{
-    width: 80px;
-}
-#feature-grid > a > p{
-    font-weight: 500!important;
-    font-size: 1rem!important;
-}
-#feature-grid>a{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#feature-grid>a>img{
-    width: 150px;
-}
-#feature-menu{
-    width: 75%;
-}
-#feature-menu p:nth-child(1){
-    margin: 0;
-    height: 5%;
-    justify-self: center;
-    font-size: 3rem;
-    font-weight: bold;
-}
-#feature-menu p:nth-child(2){
-    margin: 0;
-    height: 5%;
-    justify-self: center;
-    font-size: 2.25rem;
-    font-weight: bold;
-}
-#side{
-  position: relative;
-    border: 1px solid gray;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 5px;
-}
-#side img{
-    width: 80px;
-    height: 80px;
-}
-#feature-grid{
-    text-align: center;
-    height: 85%;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-auto-rows: 300px;
-}
-#some-random-text-at-the-bottom p:nth-child(2){
-    margin-bottom: 50px;
-    font-size: 0.5rem;
-    font-weight: 500;
-}
-#some-random-text-at-the-bottom p:nth-child(1){
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-#ads{
-    height: 500px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-#ads div{
-    border: 1px solid gray;
-    border-radius: 5px;
-    overflow: hidden;
-    width: 30%;
-}
-#ads img{
-    width: 100%;
-}
-#ads>div p:nth-of-type(1){
-    font-weight: bold;
-    font-size: 1.375rem;
-    margin: 15px;
-    height: 15%;
-}
-#ads>div p:nth-of-type(2){
-    margin: 15px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    height: 15%;
-}
-#ads>div p:nth-of-type(3){
-    margin: 15px;
-    font-size: 0.675rem;
-    font-weight: 500;
-}
-#ads button{
-    margin: 15px;
-    background-color: #FFC72C;
-    border: none;
-    border-radius: 5px;
-    height: 45px;
-    padding: 10px;
-}
-#important-note{
-    padding-top: 100px;
-    font-size: 0.625rem;
-    font-weight: 500;
-}
-      #hidden-menu{
-        display: none;
-      }
-      :root{
-    --yellow: #FFC72C;
-    --white: #FFFFFF;
-    --black: #000000;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
-}
-
-img{
-    width: 40px;
-}
-
-/* ----------------------------------------------------------- */
-
-.nav-bar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 4px solid rgb(247, 247, 247);
-    padding: 15px;
-}
-
-.nav-bar-wrapper{
-    width: 1100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0px;
-}
-
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.logo img{
-    width: 80px;
-}
-
-.logo img:nth-child(2){
-    display: none;;
-}
-
-/* ----------------------------------------------------------- */
-
-.nav-links-top{
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.85em;
-}
-
-.nav-links-top-left{
-    display: flex;
-    align-items: center;
-    gap: 34px;
-}
-
-.nav-links-top-right{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.nav-links-top-right a:nth-child(2){
-    text-decoration: underline;
-    color: rgb(65, 94, 156);
-}
-
-.nav-links-top-right a{
-    text-decoration: none;
-    color: var(--black);
-    display: flex;
-    align-items: center;
-}
-
-.nav-links-top-right p{
-    margin-bottom: 0;
-}
-
-.language-btn{
-    background-color: var(--white);
-    border-radius: none;
-    border: none;
-    color: black;
-    font-size: 0.9em;
-    padding: 0;
-}
-
-.language-btn:hover{
-    background-color: var(--white);
-    color: var(--black);
-}
-
-.language-btn:active{
-    background-color: inherit !important; /* Keeps the original color */
-    border-color: inherit !important; /* Keeps the original border color */
-    box-shadow: none !important; /* Removes the box-shadow */
-}
-
-.sign-up a,
-.career a{
-    text-decoration: none;
-    color: var(--black);
-}
-
-.search{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.search img{
-    width: 20px;
-    filter: grayscale(100);
-}
-
-.search a{
-    text-decoration: none;
-    color: var(--black);
-}
-
-.find-location{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.find-location img{
-    width: 15px;
-}
-
-.nav-links-top-right button{
-    background-color: var(--yellow);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    min-width: 115px;
-}
-
-/* ----------------------------------------------------------- */
-
-.nav-links-bottom{
-    font-size: 0.95em;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    margin-top: 25px;
-    margin-bottom: 15px;
-}
-
-.nav-links-bottom a{
-    text-decoration: none;
-    color: var(--black);
-}
-
-/* ----------------------------------------------------------- */
-
-.menu-dropdown-menu-wrapper{
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.dropdown-menu-menu{
-    width: 100vw;
-    padding: 40px;
-    margin-top: 30px !important;
-}
-
-.menu-item-wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    width: 1170px;
-}
-
-.menu-item{
-    flex: 1 1 calc(33.33%); /* Makes each item take up 1/3 of the row, accounting for the gap */
-    min-width: 300px;
-    max-width: calc(1170px/3);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.menu-item img{
-    width: 110px;
-}
-
-.menu-item p{
-    margin: 0;
-    font-size: 0.85em;
-}
-
-.full-menu-btn{
-    margin-top: 30px;
-}
-
-.full-menu-btn button{
-    padding: 20px;
-    background-color: var(--white);
-    border: 1px solid;
-    border-radius: 5px;
-}
-/* ----------------------------------------------------------- */
-
-
-.footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    padding: 15px;
-    margin-bottom: 30px;
-}
-
-/* ----------------------------------------------------------- */
-
-.footer-links-wrapper{
-    width: 1170px;
-}
-
-.footer-links{
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-}
-
-.footer-about,
-.footer-services,
-.footer-community,
-.footer-contact{
-    max-width: 188px;
-}
-
-.footer-links ul{
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links ul li{
-    margin-bottom: 5px;
-}
-
-.footer-links a{
-    font-size: 0.9em;
-    text-decoration: none;
-    color: var(--black);
-}
-
-/* ----------------------------------------------------------- */
-
-.footer-social-wrapper{
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 0;
-}
-
-.footer-social-links{
-    display: flex;
-    gap: 20px;
-}
-
-.footer-social-item img{
-    width: 35px;
-}
-
-.footer-download-app img{
-    width: 160px;
-}
-
-
-.accordion{
-    display: none;
-}
-
-.accordion-item{
-    border: none;
-}
-
-.accordion-button{
-    padding: 16px 0;
-}
-
-.accordion-button:focus {
-    color: var(--black);
-    outline: none;
-    box-shadow: none;
-    background-color: var(--white);
-}
-  
-.accordion-body{
-    padding: 0;
-}
-
-.accordion-body ul{
-    list-style: none;
-    padding: 0;
-}
-
-.accordion-body li{
-    margin-top: 5px;
-}
-
-.accordion-body li a{
-    color: var(--black);
-    text-decoration: none;
-    font-size: 0.85em;
-}
-
-
-/* ----------------------------------------------------------- */
-
-.footer-final{
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    border-top: 1px solid;
-    padding-top: 50px;
-}
-
-.footer-final > .rights-img{
-    width: 10%;
-}
-
-.privacy{
-    width: 65%;
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.privacy a{
-    text-decoration: none;
-    color: var(--black);
-    font-size: 0.9em;
-}
-
-.rights{
-    width: 25%;
-    display: flex;
-    align-items: start;
-    gap: 20px;
-}
-
-.rights img{
-    display: none;
-}
-
-
-@media (max-width: 1200px){
-  #container{
-    width: 90%;
-   }
-   
-   
-}
-@media (max-width: 1024px){
-  #top-bar{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    #hidden-menu{
-        display: block;
-        font-size: 2.5rem;
-        font-weight: bold;
-        text-align: center;
-    }
-    #sidebar{
-        display: none;
-    }
-    
-    #menu{
-        display: none;
-    }
-    #feature-favorite{
-        display: none;
-    }
-    #container{
-        align-items: center;
-    }
-    #feature-menu{
-        text-align: center;
-        width: 100%;
-        align-self: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #ads{
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        gap: 10px;
-    }
-    #ads div{
-        width: 100%;
-    }
-     #feature-grid{
-        align-items: center;
-    text-align: center;
-    height: 85%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-auto-rows: 300px;
-    }
-    
-    .nav-bar{
-        padding:5px;
-    }
-    .logo img{
-        width: 40px;
-    }
-    .logo img:nth-child(2){
-        display: block !important;
-        width: 25px;
-        cursor: pointer;
-    }
-    .nav-links-top-left{
-        display: none;
-    }
-    .nav-links-top-right a{
-        display: none;
-    }
-    .nav-links-bottom{
-        display: none;
-    }
-    .footer-links{
-        display: none;
-    }
-    .accordion{
-        display: block;
-    }
-    .footer-social-wrapper{
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-    .footer-social-links{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .footer-download-app{
-        width: 65%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .footer-final{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 20px;
-    }
-    .privacy{
-        justify-content: center;
-        gap: 15px;
-        font-size: 0.75em;
-        width: 65%;
-    }
-    .privacy a:nth-child(1){
-        text-align: center;
-        width: 100%;
-    }
-    .footer-final p{
-        font-size: 0.75em;
-    }
-
-    .rights-img{
-        display: none;
-    }
-    .rights{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 65%;
-        margin-top: 15px;
-    }
-    .rights p{
-        margin-bottom: 0;
-    }
-    .rights img{
-        display: block;
-        width: 20px;
-    }
-  }
-
-    </style>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-    </style>
   </head>
   <body>
-    <nav class="nav-bar">
-      <div class="nav-bar-wrapper">
-        <div class="logo">
-          <a href="../Home/home.html"
-            ><img src="../Nav-Images/logo.png" alt=""
-          /></a>
-          <img src="../Nav-Images/menu.png" alt="" />
-        </div>
-        <div class="nav-links">
-          <div class="nav-links-top">
-            <div class="nav-links-top-left">
-              <div class="dropdown language-dropdown">
-                <button
-                  class="language-btn btn btn-secondary dropdown-toggle"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Language
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">English</a></li>
-                  <li><a class="dropdown-item" href="#">Español</a></li>
-                </ul>
-              </div>
-              <div class="sign-up">
-                <a href="../Sign Up/sign-up.html">Sign up for Email</a>
-              </div>
-              <div class="career">
-                <a href="">Careers</a>
-              </div>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <style>
+          #content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          #container {
+            display: flex;
+            flex-direction: column;
+            width: 1170px;
+          }
+          #top-bar {
+            margin-top: 100px;
+            display: flex;
+          }
+          #top-bar a {
+            text-decoration: none;
+            color: black;
+          }
+          #top-bar {
+            width: 100%;
+          }
+          #sidebar {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            width: 25%;
+          }
+          #sidebar a {
+            display: flex;
+          }
+          #sidebar p {
+            margin: 0;
+            align-self: center;
+            font-size: 1rem;
+            margin-left: 15px;
+            font-weight: 500;
+          }
+          #side a:nth-of-type(2):before {
+            content: " ";
+            background-color: rgb(215, 0, 0);
+            width: 5px;
+            height: 10%;
+            position: absolute;
+            left: 0;
+          }
+          #feature-favorite {
+            overflow: hidden;
+            border: 1px solid gray;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-radius: 5px;
+          }
+          #feature-favorite img {
+            width: 80px;
+          }
+          #feature-grid > a > p {
+            font-weight: 500 !important;
+            font-size: 1rem !important;
+          }
+          #feature-grid > a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          #feature-grid > a > img {
+            width: 150px;
+          }
+          #feature-menu {
+            width: 75%;
+          }
+          #feature-menu p:nth-child(1) {
+            margin: 0;
+            height: 5%;
+            justify-self: center;
+            font-size: 3rem;
+            font-weight: bold;
+          }
+          #feature-menu p:nth-child(2) {
+            margin: 0;
+            height: 5%;
+            justify-self: center;
+            font-size: 2.25rem;
+            font-weight: bold;
+          }
+          #side {
+            position: relative;
+            border: 1px solid gray;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-radius: 5px;
+          }
+          #side img {
+            width: 80px;
+            height: 80px;
+          }
+          #feature-grid {
+            text-align: center;
+            height: 85%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 300px;
+          }
+          #some-random-text-at-the-bottom p:nth-child(2) {
+            margin-bottom: 50px;
+            font-size: 0.5rem;
+            font-weight: 500;
+          }
+          #some-random-text-at-the-bottom p:nth-child(1) {
+            font-size: 0.875rem;
+            font-weight: 500;
+          }
+          #ads {
+            height: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+          }
+          #ads div {
+            border: 1px solid gray;
+            border-radius: 5px;
+            overflow: hidden;
+            width: 30%;
+          }
+          #ads img {
+            width: 100%;
+          }
+          #ads > div p:nth-of-type(1) {
+            font-weight: bold;
+            font-size: 1.375rem;
+            margin: 15px;
+            height: 15%;
+          }
+          #ads > div p:nth-of-type(2) {
+            margin: 15px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            height: 15%;
+          }
+          #ads > div p:nth-of-type(3) {
+            margin: 15px;
+            font-size: 0.675rem;
+            font-weight: 500;
+          }
+          #ads button {
+            margin: 15px;
+            background-color: #ffc72c;
+            border: none;
+            border-radius: 5px;
+            height: 45px;
+            padding: 10px;
+          }
+          #important-note {
+            padding-top: 100px;
+            font-size: 0.625rem;
+            font-weight: 500;
+          }
+          #hidden-menu {
+            display: none;
+          }
+          :root {
+            --yellow: #ffc72c;
+            --white: #ffffff;
+            --black: #000000;
+          }
+
+          * {
+            margin: 0;
+            padding: 0;
+            font-family: "Montserrat", sans-serif;
+          }
+
+          img {
+            width: 40px;
+          }
+
+          /* ----------------------------------------------------------- */
+
+          .nav-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 4px solid rgb(247, 247, 247);
+            padding: 15px;
+          }
+
+          .nav-bar-wrapper {
+            width: 1100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0px;
+          }
+
+          .logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+          }
+
+          .logo img {
+            width: 80px;
+          }
+
+          .logo img:nth-child(2) {
+            display: none;
+          }
+
+          /* ----------------------------------------------------------- */
+
+          .nav-links-top {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85em;
+          }
+
+          .nav-links-top-left {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+          }
+
+          .nav-links-top-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+          }
+
+          .nav-links-top-right a:nth-child(2) {
+            text-decoration: underline;
+            color: rgb(65, 94, 156);
+          }
+
+          .nav-links-top-right a {
+            text-decoration: none;
+            color: var(--black);
+            display: flex;
+            align-items: center;
+          }
+
+          .nav-links-top-right p {
+            margin-bottom: 0;
+          }
+
+          .language-btn {
+            background-color: var(--black);
+            border-radius: none;
+            border: none;
+            color: black;
+            font-size: 0.9em;
+            padding: 0;
+          }
+
+          .language-btn:hover {
+            background-color: var(--white);
+            color: var(--black);
+          }
+
+          .language-btn:active {
+            background-color: inherit !important; /* Keeps the original color */
+            border-color: inherit !important; /* Keeps the original border color */
+            box-shadow: none !important; /* Removes the box-shadow */
+          }
+
+          .sign-up a,
+          .career a {
+            text-decoration: none;
+            color: var(--black);
+          }
+
+          .search {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+          }
+
+          .search img {
+            width: 20px;
+            filter: grayscale(100);
+          }
+
+          .search a {
+            text-decoration: none;
+            color: var(--black);
+          }
+
+          .find-location {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+          }
+
+          .find-location img {
+            width: 15px;
+          }
+
+          .nav-links-top-right button {
+            background-color: var(--yellow);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            min-width: 115px;
+          }
+
+          /* ----------------------------------------------------------- */
+
+          .nav-links-bottom {
+            font-size: 0.95em;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-top: 25px;
+            margin-bottom: 15px;
+          }
+
+          .nav-links-bottom a {
+            text-decoration: none;
+            color: var(--black);
+          }
+
+          /* ----------------------------------------------------------- */
+
+          .menu-dropdown-menu-wrapper {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .dropdown-menu-menu {
+            width: 100vw;
+            padding: 40px;
+            margin-top: 30px !important;
+          }
+
+          .menu-item-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            width: 1170px;
+          }
+
+          .menu-item {
+            flex: 1 1 calc(33.33%); /* Makes each item take up 1/3 of the row, accounting for the gap */
+            min-width: 300px;
+            max-width: calc(1170px / 3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+
+          .menu-item img {
+            width: 110px;
+          }
+
+          .menu-item p {
+            margin: 0;
+            font-size: 0.85em;
+          }
+
+          .full-menu-btn {
+            margin-top: 30px;
+          }
+
+          .full-menu-btn button {
+            padding: 20px;
+            background-color: var(--white);
+            border: 1px solid;
+            border-radius: 5px;
+          }
+          /* ----------------------------------------------------------- */
+
+          .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            padding: 15px;
+            margin-bottom: 30px;
+          }
+
+          /* ----------------------------------------------------------- */
+
+          .footer-links-wrapper {
+            width: 1170px;
+          }
+
+          .footer-links {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+          }
+
+          .footer-about,
+          .footer-services,
+          .footer-community,
+          .footer-contact {
+            max-width: 188px;
+          }
+
+          .footer-links ul {
+            list-style: none;
+            padding: 0;
+          }
+
+          .footer-links ul li {
+            margin-bottom: 5px;
+          }
+
+          .footer-links a {
+            font-size: 0.9em;
+            text-decoration: none;
+            color: var(--black);
+          }
+
+          /* ----------------------------------------------------------- */
+
+          .footer-social-wrapper {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 0;
+          }
+
+          .footer-social-links {
+            display: flex;
+            gap: 20px;
+          }
+
+          .footer-social-item img {
+            width: 35px;
+          }
+
+          .footer-download-app img {
+            width: 160px;
+          }
+
+          .accordion {
+            display: none;
+          }
+
+          .accordion-item {
+            border: none;
+          }
+
+          .accordion-button {
+            padding: 16px 0;
+          }
+
+          .accordion-button:focus {
+            color: var(--black);
+            outline: none;
+            box-shadow: none;
+            background-color: var(--white);
+          }
+
+          .accordion-body {
+            padding: 0;
+          }
+
+          .accordion-body ul {
+            list-style: none;
+            padding: 0;
+          }
+
+          .accordion-body li {
+            margin-top: 5px;
+          }
+
+          .accordion-body li a {
+            color: var(--black);
+            text-decoration: none;
+            font-size: 0.85em;
+          }
+
+          /* ----------------------------------------------------------- */
+
+          .footer-final {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            border-top: 1px solid;
+            padding-top: 50px;
+          }
+
+          .footer-final > .rights-img {
+            width: 10%;
+          }
+
+          .privacy {
+            width: 65%;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+          }
+
+          .privacy a {
+            text-decoration: none;
+            color: var(--black);
+            font-size: 0.9em;
+          }
+
+          .rights {
+            width: 25%;
+            display: flex;
+            align-items: start;
+            gap: 20px;
+          }
+
+          .rights img {
+            display: none;
+          }
+
+          @media (max-width: 1200px) {
+            #container {
+              width: 90%;
+            }
+          }
+          @media (max-width: 1024px) {
+            #top-bar {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+            }
+            #hidden-menu {
+              display: block;
+              font-size: 2.5rem;
+              font-weight: bold;
+              text-align: center;
+            }
+            #sidebar {
+              display: none;
+            }
+
+            #menu {
+              display: none;
+            }
+            #feature-favorite {
+              display: none;
+            }
+            #container {
+              align-items: center;
+            }
+            #feature-menu {
+              text-align: center;
+              width: 100%;
+              align-self: center;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+            #ads {
+              display: flex;
+              flex-direction: column;
+              height: auto;
+              gap: 10px;
+            }
+            #ads div {
+              width: 100%;
+            }
+            #feature-grid {
+              align-items: center;
+              text-align: center;
+              height: 85%;
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              grid-auto-rows: 300px;
+            }
+
+            .nav-bar {
+              padding: 5px;
+            }
+            .logo img {
+              width: 40px;
+            }
+            .logo img:nth-child(2) {
+              display: block !important;
+              width: 25px;
+              cursor: pointer;
+            }
+            .nav-links-top-left {
+              display: none;
+            }
+            .nav-links-top-right a {
+              display: none;
+            }
+            .nav-links-bottom {
+              display: none;
+            }
+            .footer-links {
+              display: none;
+            }
+            .accordion {
+              display: block;
+            }
+            .footer-social-wrapper {
+              flex-direction: column;
+              align-items: center;
+              gap: 40px;
+            }
+            .footer-social-links {
+              flex-wrap: wrap;
+              justify-content: center;
+            }
+            .footer-download-app {
+              width: 65%;
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+            }
+            .footer-final {
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              padding-top: 20px;
+            }
+            .privacy {
+              justify-content: center;
+              gap: 15px;
+              font-size: 0.75em;
+              width: 65%;
+            }
+            .privacy a:nth-child(1) {
+              text-align: center;
+              width: 100%;
+            }
+            .footer-final p {
+              font-size: 0.75em;
+            }
+
+            .rights-img {
+              display: none;
+            }
+            .rights {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 65%;
+              margin-top: 15px;
+            }
+            .rights p {
+              margin-bottom: 0;
+            }
+            .rights img {
+              display: block;
+              width: 20px;
+            }
+          }
+        </style>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Document</title>
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+          crossorigin="anonymous"
+        />
+        <style>
+          @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+        </style>
+      </head>
+      <body>
+        <nav class="nav-bar">
+          <div class="nav-bar-wrapper">
+            <div class="logo">
+              <a href="../Home/home.html"
+                ><img src="../Nav-Images/logo.png" alt=""
+              /></a>
+              <img src="../Nav-Images/menu.png" alt="" />
             </div>
-            <div class="nav-links-top-right">
-              <a href="../Search/search.html" class="search">
-                <img src="../Nav-Images/search.png" alt="serach icon" />
-                <p>Search</p>
-              </a>
-              <a href="../Locate/locate.html" class="find-location">
-                <img src="../Nav-Images/location.png" alt="location icon" />
-                <p>Find Your Restaurant</p>
-              </a>
-              <div class="order">
-                <button class="order-btn">Order Now</button>
+            <div class="nav-links">
+              <div class="nav-links-top">
+                <div class="nav-links-top-left">
+                  <div class="dropdown language-dropdown">
+                    <button
+                      class="language-btn btn btn-secondary dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Language
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">English</a></li>
+                      <li><a class="dropdown-item" href="#">Español</a></li>
+                    </ul>
+                  </div>
+                  <div class="sign-up">
+                    <a href="../Sign Up/sign-up.html">Sign up for Email</a>
+                  </div>
+                  <div class="career">
+                    <a href="">Careers</a>
+                  </div>
+                </div>
+                <div class="nav-links-top-right">
+                  <a href="../Search/search.html" class="search">
+                    <img src="../Nav-Images/search.png" alt="serach icon" />
+                    <p>Search</p>
+                  </a>
+                  <a href="../Locate/locate.html" class="find-location">
+                    <img src="../Nav-Images/location.png" alt="location icon" />
+                    <p>Find Your Restaurant</p>
+                  </a>
+                  <div class="order">
+                    <button class="order-btn">Order Now</button>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-links-bottom">
+                <div class="menu">
+                  <div class="dropdown language-dropdown">
+                    <button
+                      class="language-btn btn btn-secondary dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Our Menu
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-menu">
+                      <div class="menu-dropdown-menu-wrapper">
+                        <div class="menu-item-wrapper">
+                          <a href="../Menu/mealdeal.html" class="menu-item">
+                            <img src="../Nav-Images/mealDeals.png" alt="" />
+                            <p>Meal Deals</p>
+                          </a>
+                          <a href="../Menu/nugget.html" class="menu-item">
+                            <img src="../Nav-Images/mcNuggets.png" alt="" />
+                            <p>McNuggets®</p>
+                          </a>
+                          <a href="../Menu/cafe.html" class="menu-item">
+                            <img src="../Nav-Images/mcCoffee.png" alt="" />
+                            <p>McCafé <sup>®</sup> Coffees</p>
+                          </a>
+                          <a href="../Menu/breakfast.html" class="menu-item">
+                            <img src="../Nav-Images/breakfast.png" alt="" />
+                            <p>Breakfast</p>
+                          </a>
+                          <a href="../Menu/fries.html" class="menu-item">
+                            <img src="../Nav-Images/fries.png" alt="" />
+                            <p>Fries & Sides</p>
+                          </a>
+                          <a href="../Menu/drink.html" class="menu-item">
+                            <img src="../Nav-Images/beverages.png" alt="" />
+                            <p>Beverages</p>
+                          </a>
+                          <a href="../Menu/burger.html" class="menu-item">
+                            <img src="../Nav-Images/burgers.png" alt="" />
+                            <p>Burgers</p>
+                          </a>
+                          <a href="../Menu/happy.html" class="menu-item">
+                            <img src="../Nav-Images/happy-meal.png" alt="" />
+                            <p>Happy Meal <sup>®</sup></p>
+                          </a>
+                          <a href="../Menu/dollar.html" class="menu-item">
+                            <img src="../Nav-Images/dollar-menu.png" alt="" />
+                            <p>$1 $2 $3 Dollar Menu*</p>
+                          </a>
+                          <a href="../Menu/chicken.html" class="menu-item">
+                            <img src="../Nav-Images/chicken-fish-sw.png" alt="" />
+                            <p>Chicken & Fish Sandwiches</p>
+                          </a>
+                          <a href="../Menu/sweet.html" class="menu-item">
+                            <img src="../Nav-Images/sweets.png" alt="" />
+                            <p>Sweets & Treats</p>
+                          </a>
+                        </div>
+                        <a href="../Menu/menu.html" class="full-menu-btn">
+                          <button>View Full Menu</button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="download">
+                  <a href="../Download-App/download-app.html">Download App</a>
+                </div>
+                <div class="rewards">
+                  <a href="../Reward/reward.html"> MyMcDonald's Rewards </a>
+                </div>
+                <div class="deals">
+                  <a href="../Deals/deals.html"> Exclusive Deals </a>
+                </div>
+                <div class="about">
+                  <a href="../About/about.html"> About Our Food </a>
+                </div>
+                <div class="delivery">
+                  <a href="../McDelivery/McDelivery.html"> McDelivery </a>
+                </div>
+                <div class="locate">
+                  <a href="../Locate/locate.html"> Locate </a>
+                </div>
+                <div class="gift-card">
+                  <a href="../Gift Cards/gift-cards.html"> Gift Cards </a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="nav-links-bottom">
-            <div class="menu">
-              <div class="dropdown language-dropdown">
-                <button
-                  class="language-btn btn btn-secondary dropdown-toggle"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+        </nav>
+        <div id="content-container">
+          <div id="container">
+            <div id="top-bar">
+              <div id="hidden-menu">Breakfast</div>
+              <div id="sidebar">
+                <div id="feature-favorite">
+                  <a href="menu.html">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/FeaturedFavorites_NavImage:category-panel-left-desktop"
+                      alt=""
+                    />
+                    <p>Featured Favorites</p>
+                  </a>
+                </div>
+                <nav id="side">
+                  <a href="mealdeal.html">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/MealDeal_NavigationImage_160x160v1:category-panel-left-desktop"
+                      alt=""
+                    />
+                    <p>Meal Deals</p>
+                  </a>
+                  <a href="breakfast.html">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/breakfast_300x300:category-panel-left-desktop"
+                      alt=""
+                    />
+                    <p><b>Breakfast</b></p>
+                  </a>
+                  <a href="burger.html">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/LeftRail_BurgersPCP_160x160:category-panel-left-desktop"
+                      alt=""
+                    />
+                    <p>Burgers</p>
+                  </a>
+                  <a href="chicken.html">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/LeftRail_ChickenFishPCP_160x160:category-panel-left-desktop"
+                      alt=""
+                    />
+                    <p>Chicken & Fish Sandwiches</p>
+                  </a>
+                  <a href="nugget.html">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/202006_5280_10McNuggets_Dunked_160x160:category-panel-left-desktop"
+                      alt=""
+                    />
+                    <p>McNuggets®</p>
+                  </a>
+                  <a href="fries.html">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/Category_202408_FriesandSides_160x160:category-panel-left-desktop"
+                      alt=""
+                    />
+                    <p>Fries & Sides</p>
+                  </a>
+                  <a href="happy.html">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/nav_happy_meal_160x160:category-panel-left-desktop"
+                      alt=""
+                    />
+                    <p>Happy Meal®</p>
+                  </a>
+                  <a href="sweet.html">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/desserts_shakes_300x300:category-panel-left-desktop"
+                      alt=""
+                    />
+                    <p>Sweets & Treats</p>
+                  </a>
+                  <a href="cafe.html">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/mccafe_300x300:category-panel-left-desktop"
+                      alt=""
+                    />
+                    <p>McCafé® Coffees</p>
+                  </a>
+                  <a href="drink.html">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/NavImage_Beverages_160x160:category-panel-left-desktop"
+                      alt=""
+                    />
+                    <p>Beverages</p>
+                  </a>
+                  <a href="dollar.html">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/D123_160x160:category-panel-left-desktop"
+                      alt=""
+                    />
+                    <p>$1 $2 $3 Dollar Menu*</p>
+                  </a>
+                </nav>
+              </div>
+              <div id="feature-menu">
+                <p id="menu">Breakfast</p>
+                <div id="feature-grid">
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202405_0085_BaconEggCheeseBiscuit_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Bacon, Egg & Cheese Biscuit</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202004_0046_EggMcMuffin_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Egg McMuffin®</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_201907_0083_SausageEggMcMuffin_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Suasage McMuffin® with Egg</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_201907_0062_SausageBiscuit_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Suasage Biscuit</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_201907_0092_SausageEggBiscuit_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Suasage Biscuit with Egg</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_201908_9839_BEC_McGriddle_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Bacon, Egg & Cheese McGriddle®</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_201907_9841_SausageEggCheeseMcGriddle_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Suasage, Egg & Cheese McGriddle®</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202405_0107_BigBreakfast._1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Big Breakfast®</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202405_0031_3HotCakes_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Hotcakes</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202405_0032_3HotCakes_Sausage_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Hotcakes and Suasage</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202004_0334_SausageBurrito_Alt_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Suasage Burrito</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202004_0035_HashBrowns_Broken_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Hash Browns</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202002_1500_Oatmeal_Fruit_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Fruit & Maple Oatmeal</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202007_0252_EVM_HB_EggMcMuffin_Coffee_Glass_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Egg McMuffin® Meal</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202008_3655_EVM_HB_SausageEggMcMuffin_Coffee_Glass_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Suasage McMuffin® with Egg Meal</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202007_0251_EVM_HB_SausageEggBiscuit_Coffee_Glass_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Suasage Biscuit with Egg Meal</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202104_0250_EVM_HB_BaconEggCheeseBiscuit_Coffee_Glass_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Bacon, Egg & Cheese Biscuit Meal</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202008_9840_EVM_HB_BaconEggCheeseMcGriddle_Coffee_Glass_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Bacon, Egg & Cheese McGriddle® Meal</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202008_9842_EVM_HB_SausageEggCheeseMcGriddle_Coffee_Glass_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Suasage, Egg & Cheese McGriddle® Meal</p>
+                  </a>
+                  <a href="">
+                    <img
+                      src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202008_5093_EVM_HB_2SausageBurrito_Coffee_Glass_1564x1564-1:nutrition-calculator-tile"
+                      alt=""
+                    />
+                    <p>Suasage Burrito Meal</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div id="some-random-text-at-the-bottom">
+              <p>
+                The McDonald's Breakfast Menu includes all your favorite
+                breakfast items! From our Egg McMuffin® breakfast sandwich to
+                our famous Hash Browns, you'll find everything you love!
+
+                <br /><br />Order a McDonald's Breakfast meal today from our
+                <a href="">full menu in the app</a> using contactless
+                <a href="">Mobile Order & Pay* </a>for pickup or McDelivery®.*
+              </p>
+              <p>
+                *At participating McDonald's. Delivery prices may be higher than
+                at restaurants. Delivery/other fees may apply.
+              </p>
+            </div>
+            <div id="ads">
+              <div>
+                <img
+                  src="https://s7d1.scene7.com/is/image/mcdonalds/FeatureCallout_Loyalty_c2404x176:1-3-full-bleed-tile-desktop?resmode=sharp2"
+                  alt=""
+                />
+                <p>Earn Points for Free McDonald's</p>
+                <p>
+                  Download the app and join MyMcDonald's Rewards to earn bonus
+                  points on your McDonald's orders—then, start getting fave
+                  after fave for free. *
+                </p>
+                <button>Join Now</button>
+                <p>
+                  * At participating McDonald's. Refer to
+                  <a href="">MyMcDonald's Program Terms</a> for details. Must
+                  opt in to Rewards.
+                </p>
+              </div>
+              <div>
+                <img
+                  src="https://s7d1.scene7.com/is/image/mcdonalds/Feature_Callout_Desktop_Convenience_404x176:1-3-full-bleed-tile-desktop?resmode=sharp2"
+                  alt=""
+                />
+                <p>Ordering Ahead? Show Off.</p>
+                <p>
+                  Get your faves faster when you order ahead in the app and
+                  choose Curbside or Front Counter Pickup. *
+                </p>
+                <button>Use The App to Order</button>
+                <p>* At participating McDonald's.</p>
+              </div>
+              <div>
+                <img
+                  src="https://s7d1.scene7.com/is/image/mcdonalds/featured_desktop_404x176-email-signup:1-3-full-bleed-tile-desktop?resmode=sharp2"
+                  alt=""
+                />
+                <p>Join Our Email List</p>
+                <p>
+                  Get news, promotions, and more delivered right to your inbox.
+                </p>
+                <button>Sign Up For Our Email List</button>
+              </div>
+            </div>
+            <div id="important-note">
+              <p>
+                Important Note: <br />
+                At McDonald's, we take great care to serve quality,
+                great-tasting menu items to our customers each and every time
+                they visit our restaurants. We understand that each of our
+                customers has individual needs and considerations when choosing
+                a place to eat or drink outside their home, especially those
+                customers with food allergies. As part of our commitment to you,
+                we provide the most current ingredient information available
+                from our food suppliers for the nine most common allergens as
+                identified by the U.S. Food and Drug Administration (eggs,
+                dairy, wheat, soy, peanuts, tree nuts, fish, shellfish and
+                sesame), so that our guests with food allergies can make
+                informed food selections. However, we also want you to know that
+                despite taking precautions, normal kitchen operations may
+                involve some shared cooking and preparation areas, equipment and
+                utensils, and the possibility exists for your food items to come
+                in contact with other food products, including allergens. We
+                encourage our customers with food allergies or special dietary
+                needs to visit www.mcdonalds.com for ingredient information, and
+                to consult their doctor for questions regarding their diet. If
+                you have questions about our food, please reach out to us
+                directly using our <a href="">contact us forms</a>. <br /><br />
+
+                Percent Daily Values (DV) and RDIs are based on unrounded
+                values. <br /><br />
+
+                <a href="">**</a>Percent Daily Values (DV) are based on a 2,000
+                calorie diet. Your daily values may be higher or lower depending
+                on your calorie needs. <br /><br />
+                The nutrition information on this website is derived from
+                testing conducted in accredited laboratories, published
+                resources, or from information provided from McDonald's
+                suppliers. The nutrition information is based on standard
+                product formulations and serving sizes. Calories for fountain
+                beverages are based on standard fill levels plus ice. If you use
+                the self-service fountain inside the restaurant for your drink
+                order, see the sign posted at the beverage fountain for beverage
+                calories without ice. All nutrition information is based on
+                average values for ingredients and is rounded in accordance with
+                current U.S. FDA NLEA regulations. Variation in serving sizes,
+                preparation techniques, product testing and sources of supply,
+                as well as regional and seasonal differences may affect the
+                nutrition values for each product. In addition, product
+                formulations change periodically. You should expect some
+                variation in the nutrient content of the products purchased in
+                our restaurants. Beverage sizes may vary in your market.
+                McDonald's USA does not certify or claim any of its US menu
+                items as Halal, Kosher or meeting any other religious
+                requirements. We do not promote any of our US menu items as
+                vegetarian, vegan or gluten-free. This information is correct as
+                of January 2022, unless stated otherwise.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="footer-links-wrapper">
+            <div class="footer-links">
+              <div class="footer-about">
+                <b>About Us</b>
+                <br />
+                <br />
+                <ul class="footer-about-links">
+                  <li><a href="#">About Us Overview</a></li>
+                  <li><a href="#">Leadership Team</a></li>
+                  <li><a href="#">Values In Action</a></li>
+                  <li><a href="#">Franchising Info</a></li>
+                  <li><a href="#">Recalls & Alerts</a></li>
+                  <li><a href="#">Real Estate</a></li>
+                  <li><a href="#">Accessibility</a></li>
+                  <li><a href="#">Investor Relations</a></li>
+                  <li><a href="#">News & Notifications</a></li>
+                </ul>
+              </div>
+              <div class="footer-services">
+                <b>Services</b>
+                <br />
+                <br />
+                <ul class="footer-services-links">
+                  <li><a href="#">Services Overview</a></li>
+                  <li><a href="#">Delivery Partners</a></li>
+                  <li><a href="#">Wi-Fi</a></li>
+                  <li><a href="#">PlayPlaces & Parties</a></li>
+                  <li><a href="#">Mobile Order & Pay</a></li>
+                  <li><a href="#">Trending Now</a></li>
+                  <li><a href="#">McDonald's Merchandise</a></li>
+                  <li><a href="#">Family Fun Hub</a></li>
+                  <li><a href="#">MyMcDonald's Rewards</a></li>
+                  <li><a href="#">McCafé®</a></li>
+                </ul>
+              </div>
+              <div class="footer-community">
+                <b>Community</b>
+                <br />
+                <br />
+                <ul class="footer-community-links">
+                  <li><a href="#">Community Overview</a></li>
+                  <li><a href="#">Now Serving</a></li>
+                  <li><a href="#">Scholarship Overview</a></li>
+                  <li>
+                    <a href="#">HACER® Scholarships for Hispanic Students</a>
+                  </li>
+                  <li><a href="#">McDonald's Asian Pacific American</a></li>
+                  <li><a href="#">Black and Positively Golden</a></li>
+                  <li><a href="#">Ronald McDonald House Charities®</a></li>
+                  <li><a href="#">McDonald's International</a></li>
+                  <li><a href="#">McDonald's LGBTQ+</a></li>
+                </ul>
+              </div>
+              <div class="footer-contact">
+                <b>Contact Us</b>
+                <br />
+                <br />
+                <ul class="footer-contact-links">
+                  <li><a href="#">Contact Us Overview</a></li>
+                  <li><a href="#">Gift Card FAQs</a></li>
+                  <li><a href="#">Donations</a></li>
+                  <li><a href="#">Employment</a></li>
+                  <li><a href="#">Customer Feedback</a></li>
+                  <li><a href="#">Frequently Asked Questions</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    About Us
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample"
                 >
-                  Our Menu
-                </button>
-                <div class="dropdown-menu dropdown-menu-menu">
-                  <div class="menu-dropdown-menu-wrapper">
-                    <div class="menu-item-wrapper">
-                      <div class="menu-item">
-                        <img src="../Nav-Images/mealDeals.png" alt="" />
-                        <p>Meal Deals</p>
-                      </div>
-                      <div class="menu-item">
-                        <img src="../Nav-Images/mcNuggets.png" alt="" />
-                        <p>McNuggets®</p>
-                      </div>
-                      <div class="menu-item">
-                        <img src="../Nav-Images/mcCoffee.png" alt="" />
-                        <p>McCafé <sup>®</sup> Coffees</p>
-                      </div>
-                      <div class="menu-item">
-                        <img src="../Nav-Images/breakfast.png" alt="" />
-                        <p>Breakfast</p>
-                      </div>
-                      <div class="menu-item">
-                        <img src="../Nav-Images/fries.png" alt="" />
-                        <p>Fries & Sides</p>
-                      </div>
-                      <div class="menu-item">
-                        <img src="../Nav-Images/beverages.png" alt="" />
-                        <p>Beverages</p>
-                      </div>
-                      <div class="menu-item">
-                        <img src="../Nav-Images/burgers.png" alt="" />
-                        <p>Burgers</p>
-                      </div>
-                      <div class="menu-item">
-                        <img src="../Nav-Images/happy-meal.png" alt="" />
-                        <p>Happy Meal <sup>®</sup></p>
-                      </div>
-                      <div class="menu-item">
-                        <img src="../Nav-Images/dollar-menu.png" alt="" />
-                        <p>$1 $2 $3 Dollar Menu*</p>
-                      </div>
-                      <div class="menu-item">
-                        <img src="../Nav-Images/chicken-fish-sw.png" alt="" />
-                        <p>Chicken & Fish Sandwiches</p>
-                      </div>
-                      <div class="menu-item">
-                        <img src="../Nav-Images/sweets.png" alt="" />
-                        <p>Sweets & Treats</p>
-                      </div>
-                    </div>
-                    <div class="full-menu-btn">
-                      <button>View Full Menu</button>
-                    </div>
+                  <div class="accordion-body">
+                    <ul class="footer-about-links">
+                      <li><a href="#">About Us Overview</a></li>
+                      <li><a href="#">Leadership Team</a></li>
+                      <li><a href="#">Values In Action</a></li>
+                      <li><a href="#">Franchising Info</a></li>
+                      <li><a href="#">Recalls & Alerts</a></li>
+                      <li><a href="#">Real Estate</a></li>
+                      <li><a href="#">Accessibility</a></li>
+                      <li><a href="#">Investor Relations</a></li>
+                      <li><a href="#">News & Notifications</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    Services
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="footer-services-links">
+                      <li><a href="#">Services Overview</a></li>
+                      <li><a href="#">Delivery Partners</a></li>
+                      <li><a href="#">Wi-Fi</a></li>
+                      <li><a href="#">PlayPlaces & Parties</a></li>
+                      <li><a href="#">Mobile Order & Pay</a></li>
+                      <li><a href="#">Trending Now</a></li>
+                      <li><a href="#">McDonald's Merchandise</a></li>
+                      <li><a href="#">Family Fun Hub</a></li>
+                      <li><a href="#">MyMcDonald's Rewards</a></li>
+                      <li><a href="#">McCafé®</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    Community
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingThree"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="footer-community-links">
+                      <li><a href="#">Community Overview</a></li>
+                      <li><a href="#">Now Serving</a></li>
+                      <li><a href="#">Scholarship Overview</a></li>
+                      <li>
+                        <a href="#"
+                          >HACER® Scholarships for Hispanic Students</a
+                        >
+                      </li>
+                      <li><a href="#">McDonald's Asian Pacific American</a></li>
+                      <li><a href="#">Black and Positively Golden</a></li>
+                      <li><a href="#">Ronald McDonald House Charities®</a></li>
+                      <li><a href="#">McDonald's International</a></li>
+                      <li><a href="#">McDonald's LGBTQ+</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                  >
+                    Contact Us
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingFour"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="footer-contact-links">
+                      <li><a href="#">Contact Us Overview</a></li>
+                      <li><a href="#">Gift Card FAQs</a></li>
+                      <li><a href="#">Donations</a></li>
+                      <li><a href="#">Employment</a></li>
+                      <li><a href="#">Customer Feedback</a></li>
+                      <li><a href="#">Frequently Asked Questions</a></li>
+                    </ul>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="download">
-              <a href="../Download-App/download-app.html">Download App</a>
-            </div>
-            <div class="rewards">
-              <a href="../Reward/reward.html"> MyMcDonald's Rewards </a>
-            </div>
-            <div class="deals">
-              <a href="../Deals/deals.html"> Exclusive Deals </a>
-            </div>
-            <div class="about">
-              <a href="../About/about.html"> About Our Food </a>
-            </div>
-            <div class="delivery">
-              <a href="../McDelivery/McDelivery.html"> McDelivery </a>
-            </div>
-            <div class="locate">
-              <a href="../Locate/locate.html"> Locate </a>
-            </div>
-            <div class="gift-card">
-              <a href="../Gift Cards/gift-cards.html"> Gift Cards </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <a href="menu.html" style="padding-left: 10px; font-size: 0.875rem;">< View Full Menu</a>
-    <div id="content-container">
-      <div id="container">
-        <div id="top-bar">
-          <div id="hidden-menu">Breakfast</div>
-          <div id="sidebar">
-            <div id="feature-favorite">
-              <a href="menu.html" >
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/FeaturedFavorites_NavImage:category-panel-left-desktop" alt="">
-                <p >Featured Favorites</p>
-              </a>
-            </div>
-            <nav id="side">
-              <a href="mealdeal.html">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/MealDeal_NavigationImage_160x160v1:category-panel-left-desktop" alt="">
-                <p>Meal Deals</p>
-              </a>
-              <a href="breakfast.html">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/breakfast_300x300:category-panel-left-desktop" alt="">
-                <p><b>Breakfast</b></p>
-              </a>
-              <a href="burger.html">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/LeftRail_BurgersPCP_160x160:category-panel-left-desktop" alt="">
-                <p>Burgers</p>
-              </a>
-              <a href="chicken.html">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/LeftRail_ChickenFishPCP_160x160:category-panel-left-desktop" alt="">
-                <p>Chicken & Fish Sandwiches</p>
-              </a>
-              <a href="nugget.html">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/202006_5280_10McNuggets_Dunked_160x160:category-panel-left-desktop" alt="">
-                <p>McNuggets®</p>
-              </a>
-              <a href="fries.html">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/Category_202408_FriesandSides_160x160:category-panel-left-desktop" alt="">
-                <p>Fries & Sides</p>
-              </a>
-              <a href="happy.html">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/nav_happy_meal_160x160:category-panel-left-desktop" alt="">
-                <p>Happy Meal®</p>
-              </a>
-              <a href="sweet.html">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/desserts_shakes_300x300:category-panel-left-desktop" alt="">
-                <p>Sweets & Treats</p>
-              </a>
-              <a href="cafe.html">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/mccafe_300x300:category-panel-left-desktop" alt="">
-                <p>McCafé® Coffees</p>
-              </a>
-              <a href="drink.html">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/NavImage_Beverages_160x160:category-panel-left-desktop" alt="">
-                <p>Beverages</p>
-              </a>
-              <a href="dollar.html">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/D123_160x160:category-panel-left-desktop" alt="">
-                <p>$1 $2 $3 Dollar Menu*</p>
-              </a>
-            </nav>
-          </div>
-          <div id="feature-menu">
-            <p id="menu">Breakfast</p>
-            <div id="feature-grid">
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202405_0085_BaconEggCheeseBiscuit_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Bacon, Egg & Cheese Biscuit</p>
-              </a>
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202004_0046_EggMcMuffin_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Egg McMuffin®</p>
-              </a>
-              <a href="">
-              <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_201907_0083_SausageEggMcMuffin_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Suasage McMuffin® with Egg</p>
-              </a>
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_201907_0062_SausageBiscuit_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Suasage Biscuit</p>
-              </a>
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_201907_0092_SausageEggBiscuit_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Suasage Biscuit with Egg</p>
-              </a>
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_201908_9839_BEC_McGriddle_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Bacon, Egg & Cheese McGriddle®</p>
-              </a>
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_201907_9841_SausageEggCheeseMcGriddle_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Suasage, Egg & Cheese McGriddle®</p>
-              </a>
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202405_0107_BigBreakfast._1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Big Breakfast®</p>
-              </a>
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202405_0031_3HotCakes_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Hotcakes</p>
-              </a>
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202405_0032_3HotCakes_Sausage_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Hotcakes and Suasage</p>
-              </a>
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202004_0334_SausageBurrito_Alt_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Suasage Burrito</p>
-              </a>
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202004_0035_HashBrowns_Broken_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Hash Browns</p>
-              </a>
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202002_1500_Oatmeal_Fruit_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Fruit & Maple Oatmeal</p>
-              </a>
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202007_0252_EVM_HB_EggMcMuffin_Coffee_Glass_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Egg McMuffin® Meal</p>
-              </a>
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202008_3655_EVM_HB_SausageEggMcMuffin_Coffee_Glass_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Suasage McMuffin® with Egg Meal</p>
-              </a>
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202007_0251_EVM_HB_SausageEggBiscuit_Coffee_Glass_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Suasage Biscuit with Egg Meal</p>
-              </a>
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202104_0250_EVM_HB_BaconEggCheeseBiscuit_Coffee_Glass_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Bacon, Egg & Cheese Biscuit Meal</p>
-              </a>
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202008_9840_EVM_HB_BaconEggCheeseMcGriddle_Coffee_Glass_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Bacon, Egg & Cheese McGriddle® Meal</p>
-              </a>
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202008_9842_EVM_HB_SausageEggCheeseMcGriddle_Coffee_Glass_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Suasage, Egg & Cheese McGriddle® Meal</p>
-              </a>
-              <a href="">
-                <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202008_5093_EVM_HB_2SausageBurrito_Coffee_Glass_1564x1564-1:nutrition-calculator-tile" alt="">
-                <p>Suasage Burrito Meal</p>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div id="some-random-text-at-the-bottom">
-          <p>The McDonald's Breakfast Menu includes all your favorite breakfast items! From our Egg McMuffin® breakfast sandwich to our famous Hash Browns, you'll find everything you love!
-      
-              <br><br>Order a McDonald's Breakfast meal today from our <a href="">full menu in the app</a> using contactless <a href="">Mobile Order & Pay* </a>for pickup or McDelivery®.*
-          </p>
-          <p>*At participating McDonald's. Delivery prices may be higher than at restaurants. Delivery/other fees may apply.</p>
-        </div>
-        <div id="ads" >
-          <div>
-            <img src="https://s7d1.scene7.com/is/image/mcdonalds/FeatureCallout_Loyalty_c2404x176:1-3-full-bleed-tile-desktop?resmode=sharp2" alt="">
-            <p>Earn Points for Free McDonald's</p>
-            <p>Download the app and join MyMcDonald's Rewards to earn bonus points on your McDonald's orders—then, start getting fave after fave for free. *</p>
-            <button>Join Now</button>
-            <p>* At participating McDonald's. Refer to  <a href="">MyMcDonald's Program Terms</a> for details. Must opt in to Rewards.</p>
-          </div>
-          <div>
-            <img src="https://s7d1.scene7.com/is/image/mcdonalds/Feature_Callout_Desktop_Convenience_404x176:1-3-full-bleed-tile-desktop?resmode=sharp2" alt="">
-            <p>Ordering Ahead? Show Off.</p>
-            <p>Get your faves faster when you order ahead in the app and choose Curbside or Front Counter Pickup. *</p>
-            <button>Use The App to Order</button>
-            <p>* At participating McDonald's.</p>
-          </div>
-          <div>
-            <img src="https://s7d1.scene7.com/is/image/mcdonalds/featured_desktop_404x176-email-signup:1-3-full-bleed-tile-desktop?resmode=sharp2" alt="">
-            <p>Join Our Email List</p>
-            <p>Get news, promotions, and more delivered right to your inbox.</p>
-            <button>Sign Up For Our Email List</button>
-          </div>
-        </div>
-      <div id="important-note">
-      <p>Important Note: <br>
-        At McDonald's, we take great care to serve quality, great-tasting menu items to our customers each and every time they visit our restaurants. We understand that each of our customers has individual needs and considerations when choosing a place to eat or drink outside their home, especially those customers with food allergies. As part of our commitment to you, we provide the most current ingredient information available from our food suppliers for the nine most common allergens as identified by the U.S. Food and Drug Administration (eggs, dairy, wheat, soy, peanuts, tree nuts, fish, shellfish and sesame), so that our guests with food allergies can make informed food selections. However, we also want you to know that despite taking precautions, normal kitchen operations may involve some shared cooking and preparation areas, equipment and utensils, and the possibility exists for your food items to come in contact with other food products, including allergens. We encourage our customers with food allergies or special dietary needs to visit www.mcdonalds.com for ingredient information, and to consult their doctor for questions regarding their diet. If you have questions about our food, please reach out to us directly using our <a href="">contact us forms</a>. <br><br>
-      
-        Percent Daily Values (DV) and RDIs are based on unrounded values. <br><br>
-        
-        <a href="">**</a>Percent Daily Values (DV) are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs.
-        <br><br>
-        The nutrition information on this website is derived from testing conducted in accredited laboratories, published resources, or from information provided from McDonald's suppliers. The nutrition information is based on standard product formulations and serving sizes.  Calories for fountain beverages are based on standard fill levels plus ice. If you use the self-service fountain inside the restaurant for your drink order, see the sign posted at the beverage fountain for beverage calories without ice. All nutrition information is based on average values for ingredients and is rounded in accordance with current U.S. FDA NLEA regulations. Variation in serving sizes, preparation techniques, product testing and sources of supply, as well as regional and seasonal differences may affect the nutrition values for each product. In addition, product formulations change periodically. You should expect some variation in the nutrient content of the products purchased in our restaurants. Beverage sizes may vary in your market. McDonald's USA does not certify or claim any of its US menu items as Halal, Kosher or meeting any other religious requirements. We do not promote any of our US menu items as vegetarian, vegan or gluten-free. This information is correct as of January 2022, unless stated otherwise.</p>
-      </div>
-      </div>
-    </div>
-          
-  <footer class="footer">
-    <div class="footer-links-wrapper">
-      <div class="footer-links">
-        <div class="footer-about">
-          <b>About Us</b>
-          <br />
-          <br />
-          <ul class="footer-about-links">
-            <li><a href="#">About Us Overview</a></li>
-            <li><a href="#">Leadership Team</a></li>
-            <li><a href="#">Values In Action</a></li>
-            <li><a href="#">Franchising Info</a></li>
-            <li><a href="#">Recalls & Alerts</a></li>
-            <li><a href="#">Real Estate</a></li>
-            <li><a href="#">Accessibility</a></li>
-            <li><a href="#">Investor Relations</a></li>
-            <li><a href="#">News & Notifications</a></li>
-          </ul>
-        </div>
-        <div class="footer-services">
-          <b>Services</b>
-          <br />
-          <br />
-          <ul class="footer-services-links">
-            <li><a href="#">Services Overview</a></li>
-            <li><a href="#">Delivery Partners</a></li>
-            <li><a href="#">Wi-Fi</a></li>
-            <li><a href="#">PlayPlaces & Parties</a></li>
-            <li><a href="#">Mobile Order & Pay</a></li>
-            <li><a href="#">Trending Now</a></li>
-            <li><a href="#">McDonald's Merchandise</a></li>
-            <li><a href="#">Family Fun Hub</a></li>
-            <li><a href="#">MyMcDonald's Rewards</a></li>
-            <li><a href="#">McCafé®</a></li>
-          </ul>
-        </div>
-        <div class="footer-community">
-          <b>Community</b>
-          <br />
-          <br />
-          <ul class="footer-community-links">
-            <li><a href="#">Community Overview</a></li>
-            <li><a href="#">Now Serving</a></li>
-            <li><a href="#">Scholarship Overview</a></li>
-            <li><a href="#">HACER® Scholarships for Hispanic Students</a></li>
-            <li><a href="#">McDonald's Asian Pacific American</a></li>
-            <li><a href="#">Black and Positively Golden</a></li>
-            <li><a href="#">Ronald McDonald House Charities®</a></li>
-            <li><a href="#">McDonald's International</a></li>
-            <li><a href="#">McDonald's LGBTQ+</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <b>Contact Us</b>
-          <br />
-          <br />
-          <ul class="footer-contact-links">
-            <li><a href="#">Contact Us Overview</a></li>
-            <li><a href="#">Gift Card FAQs</a></li>
-            <li><a href="#">Donations</a></li>
-            <li><a href="#">Employment</a></li>
-            <li><a href="#">Customer Feedback</a></li>
-            <li><a href="#">Frequently Asked Questions</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseOne"
-              aria-expanded="false"
-              aria-controls="flush-collapseOne"
-            >
-              About Us
-            </button>
-          </h2>
-          <div
-            id="flush-collapseOne"
-            class="accordion-collapse collapse"
-            aria-labelledby="flush-headingOne"
-            data-bs-parent="#accordionFlushExample"
-          >
-            <div class="accordion-body">
-              <ul class="footer-about-links">
-                <li><a href="#">About Us Overview</a></li>
-                <li><a href="#">Leadership Team</a></li>
-                <li><a href="#">Values In Action</a></li>
-                <li><a href="#">Franchising Info</a></li>
-                <li><a href="#">Recalls & Alerts</a></li>
-                <li><a href="#">Real Estate</a></li>
-                <li><a href="#">Accessibility</a></li>
-                <li><a href="#">Investor Relations</a></li>
-                <li><a href="#">News & Notifications</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
 
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingTwo">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseTwo"
-              aria-expanded="false"
-              aria-controls="flush-collapseTwo"
-            >
-              Services
-            </button>
-          </h2>
-          <div
-            id="flush-collapseTwo"
-            class="accordion-collapse collapse"
-            aria-labelledby="flush-headingTwo"
-            data-bs-parent="#accordionFlushExample"
-          >
-            <div class="accordion-body">
-              <ul class="footer-services-links">
-                <li><a href="#">Services Overview</a></li>
-                <li><a href="#">Delivery Partners</a></li>
-                <li><a href="#">Wi-Fi</a></li>
-                <li><a href="#">PlayPlaces & Parties</a></li>
-                <li><a href="#">Mobile Order & Pay</a></li>
-                <li><a href="#">Trending Now</a></li>
-                <li><a href="#">McDonald's Merchandise</a></li>
-                <li><a href="#">Family Fun Hub</a></li>
-                <li><a href="#">MyMcDonald's Rewards</a></li>
-                <li><a href="#">McCafé®</a></li>
-              </ul>
+            <div class="footer-social-wrapper">
+              <div class="footer-social-links">
+                <a href="#" class="footer-social-item">
+                  <img src="../Nav-Images/facebook.png" alt="" />
+                </a>
+                <a href="#" class="footer-social-item">
+                  <img src="../Nav-Images/twitter.png" alt="" />
+                </a>
+                <a href="#" class="footer-social-item">
+                  <img src="../Nav-Images/youtube.png" alt="" />
+                </a>
+                <a href="#" class="footer-social-item">
+                  <img src="../Nav-Images/insta.png" alt="" />
+                </a>
+                <a href="#" class="footer-social-item">
+                  <img src="../Nav-Images/tumblr.png" alt="" />
+                </a>
+                <a href="#" class="footer-social-item">
+                  <img src="../Nav-Images/spotify.png" alt="" />
+                </a>
+              </div>
+              <div class="footer-download-app">
+                <a href="">
+                  <img src="../Nav-Images/download-ios.png" alt="" />
+                </a>
+                <a href="">
+                  <img src="../Nav-Images/download-android.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="footer-final">
+              <div class="privacy">
+                <a href="#">Privacy(Updated)</a>
+                <a href="#">California Privacy Notice</a>
+                <a href="#">Consumer Health Data</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Do Not Sell or Share My Personal Information</a>
+                <a href="#">Cookie Settings</a>
+              </div>
+              <div class="rights-img">
+                <img src="../Nav-Images/logo.png" alt="" />
+              </div>
+              <div class="rights">
+                <img src="../Nav-Images/logo.png" alt="" />
+                <p>© 2017 - 2024 McDonald's. All Rights Reserved</p>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingThree">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseThree"
-              aria-expanded="false"
-              aria-controls="flush-collapseThree"
-            >
-              Community
-            </button>
-          </h2>
-          <div
-            id="flush-collapseThree"
-            class="accordion-collapse collapse"
-            aria-labelledby="flush-headingThree"
-            data-bs-parent="#accordionFlushExample"
-          >
-            <div class="accordion-body">
-              <ul class="footer-community-links">
-                <li><a href="#">Community Overview</a></li>
-                <li><a href="#">Now Serving</a></li>
-                <li><a href="#">Scholarship Overview</a></li>
-                <li>
-                  <a href="#">HACER® Scholarships for Hispanic Students</a>
-                </li>
-                <li><a href="#">McDonald's Asian Pacific American</a></li>
-                <li><a href="#">Black and Positively Golden</a></li>
-                <li><a href="#">Ronald McDonald House Charities®</a></li>
-                <li><a href="#">McDonald's International</a></li>
-                <li><a href="#">McDonald's LGBTQ+</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingFour">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseFour"
-              aria-expanded="false"
-              aria-controls="flush-collapseFour"
-            >
-              Contact Us
-            </button>
-          </h2>
-          <div
-            id="flush-collapseFour"
-            class="accordion-collapse collapse"
-            aria-labelledby="flush-headingFour"
-            data-bs-parent="#accordionFlushExample"
-          >
-            <div class="accordion-body">
-              <ul class="footer-contact-links">
-                <li><a href="#">Contact Us Overview</a></li>
-                <li><a href="#">Gift Card FAQs</a></li>
-                <li><a href="#">Donations</a></li>
-                <li><a href="#">Employment</a></li>
-                <li><a href="#">Customer Feedback</a></li>
-                <li><a href="#">Frequently Asked Questions</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-social-wrapper">
-        <div class="footer-social-links">
-          <a href="#" class="footer-social-item">
-            <img src="../Nav-Images/facebook.png" alt="" />
-          </a>
-          <a href="#" class="footer-social-item">
-            <img src="../Nav-Images/twitter.png" alt="" />
-          </a>
-          <a href="#" class="footer-social-item">
-            <img src="../Nav-Images/youtube.png" alt="" />
-          </a>
-          <a href="#" class="footer-social-item">
-            <img src="../Nav-Images/insta.png" alt="" />
-          </a>
-          <a href="#" class="footer-social-item">
-            <img src="../Nav-Images/tumblr.png" alt="" />
-          </a>
-          <a href="#" class="footer-social-item">
-            <img src="../Nav-Images/spotify.png" alt="" />
-          </a>
-        </div>
-        <div class="footer-download-app">
-          <a href="">
-            <img src="../Nav-Images/download-ios.png" alt="" />
-          </a>
-          <a href="">
-            <img src="../Nav-Images/download-android.png" alt="" />
-          </a>
-        </div>
-      </div>
-      <div class="footer-final">
-        <div class="privacy">
-          <a href="#">Privacy(Updated)</a>
-          <a href="#">California Privacy Notice</a>
-          <a href="#">Consumer Health Data</a>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Accessibility</a>
-          <a href="#">Do Not Sell or Share My Personal Information</a>
-          <a href="#">Cookie Settings</a>
-        </div>
-        <div class="rights-img">
-          <img src="../Nav-Images/logo.png" alt="" />
-        </div>
-        <div class="rights">
-          <img src="../Nav-Images/logo.png" alt="" />
-          <p>© 2017 - 2024 McDonald's. All Rights Reserved</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-</body>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+      </body>
+    </html>
+  </body>
 </html>
