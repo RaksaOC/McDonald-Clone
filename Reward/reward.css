@@ -159,7 +159,12 @@ img{
 }
 
 /* ----------------------------------------------------------- */
-
+.rewards {
+    font-weight: bold;
+    box-sizing: border-box;
+    border-bottom: 4px solid rgb(217, 0, 0);
+    padding-top: 4px;
+}
 .menu-dropdown-menu-wrapper{
     width: 90%;
     margin: auto;
@@ -210,18 +215,130 @@ img{
 }
 /* ----------------------------------------------------------- */
 
-
 .footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1000px;
+    margin-top: 150px;
     padding: 15px;
     margin-bottom: 30px;
 }
 
 /* ----------------------------------------------------------- */
+main {
+    width: 1170px;
+    margin: 100px auto;
+}
+.header h1 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 2.9em;
+    margin-bottom: 50px;
+}
+.description {
+    margin-bottom: 30px;
+}
+.small-text {
+    margin-bottom: 100px;
+    font-size: 0.7em;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    align-items: start;
+}
+.item-text {
+    max-width: 50%;
+    padding: 30px;
+    padding-bottom: 0;
+}
+.item-text h1 {
+    font-weight: 800;
+    font-size: 1.9em;
+    margin-bottom: 20px;
+}
+.small {
+    font-size: 0.7em;
 
+}
+.item img {
+    max-width: 100%;
+    width: 48em;
+    transition: width 0.3s ease;
+}
+.btn button{
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--yellow);
+    border: 1px solid white;
+}
+.redeem-header h1{
+    font-weight: 800;
+    font-size: 2.3em;
+    margin-bottom: 30px;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.item1 img {
+    max-width: 100%;
+    width: 22em;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+.all-item {
+    margin-bottom: 60px;
+}
+.all-item h1 {
+    margin-bottom: 20px;
+}
+.unlock-header h1 {
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.unlock-images{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 100px;
+}
+.unlock-images img {
+    width: 35.8em;
+    margin-bottom: 50px;
+}
+.unlock-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.unlock-text p{
+    margin-bottom: 20px;
+}
+.fre-question{
+    font-size: 16px;
+}
+.title {
+    font-weight: 800;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.questions h1{
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 2em;
+}
+.questions p{
+    margin-bottom: 20px;
+    font-weight: 460;
+}
+.questions ol {
+    margin-bottom: 20px;
+    font-weight: 460;
+    margin-left: 10px;
+}
 .footer-links-wrapper{
     width: 1170px;
 }

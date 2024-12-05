@@ -209,7 +209,34 @@ img{
     border-radius: 5px;
 }
 /* ----------------------------------------------------------- */
-
+.search-box {
+    display: flex;
+    justify-content: center;
+}
+.search-icon{
+    background-color: #FFC72C;
+    width: 2em;
+    height: 2em;
+}
+input {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    width: 74em;
+    margin-top: 150px;
+    height: 5em;
+}
+.icon {
+    background-color: var(--yellow);
+    border: none;
+    height: 3em;
+    width: 3.5em;
+    border-radius: 5px;
+    
+}
+.search-box input::placeholder {
+    font-size: em;
+}
 
 .footer{
     display: flex;

@@ -209,8 +209,75 @@ img{
     border-radius: 5px;
 }
 /* ----------------------------------------------------------- */
+.sign-up-main {
+    width: ;
+}
+.sign-up-header h1{
+    text-align: center;
+    font-size: 2.9em;
+    font-weight: 800;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+.sign-up-info {
+    margin-left: 378px;
+    margin-bottom: 50px;
+}
+.sign-up-info h2 {
+    font-weight: 740;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+.description{
+    margin-bottom: 80px;
+}
+.form_group {
+    position: relative;
+} 
+.line {
+    margin-bottom: 50px;
+}
+.form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form_field {
+    position: relative;
+    margin-bottom: 80px;
+}
+.form_input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: none;
+    background: none;
+    font-size: inherit;
+    height: 50px;
+    width: 835px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 50px;
+}
+.form_label {
+    position: absolute;
+    top: 0.8em;
+    transition: top 200ms ease-in,
+    left 200ms ease-in, font-size 200ms ease-in;
+}
+.form_input:focus ~ .form_label, 
+.form_input:not(:placeholder-shown).form_input:not(:focus)
+~.form_label{
+    top: -1.3em;
+    font-size: 10px;
+}
 
+  
+.fill-info p{
+    margin-bottom: 30px;
 
+}
 .footer{
     display: flex;
     justify-content: center;
