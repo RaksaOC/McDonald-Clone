@@ -782,6 +782,7 @@ img{
     width: 150px;
 }
 #chicken-fish-sw-bar{
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -847,6 +848,7 @@ img{
     width: 150px;
 }
 #mccafe-bar{
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -871,6 +873,7 @@ img{
     width: 150px;
 }
 #sweets-treats-bar{
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -919,6 +922,7 @@ img{
     width: 150px;
 }
 #dollar-menu-bar{
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
