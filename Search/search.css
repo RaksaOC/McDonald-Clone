@@ -218,26 +218,19 @@ img{
     width: 2em;
     height: 2em;
 }
-input {
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    width: 74em;
+.search-box input {
+    width: 29.5em;
     margin-top: 150px;
-    height: 5em;
+    padding: 10px;
 }
-.icon {
-    background-color: var(--yellow);
-    border: none;
-    height: 3em;
-    width: 3.5em;
-    border-radius: 5px;
-    
+.search-box input[type="text"] {
+    font-size: 2.5em;
+    font-weight: 400;
+    color: var(--black);
 }
 .search-box input::placeholder {
-    font-size: em;
+    color: var(--black);
 }
-
 .footer{
     display: flex;
     justify-content: center;
