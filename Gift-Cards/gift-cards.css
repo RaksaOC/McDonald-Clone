@@ -436,3 +436,117 @@ img{
         width: 20px;
     }
 }
+main{
+    width: 1170px;
+    margin: 100px auto;
+}
+ 
+.title{
+    text-align: center;
+    margin-bottom: 100px;
+    font-weight: 800;
+    font-size: 2.9em;
+    margin-top: 100px;
+}
+ 
+.main-item{
+    display: flex;
+    align-items: start;
+    margin-bottom: 100px;
+}
+.main-item img{
+    max-width: 80%;
+    width: 42em;
+}
+.main-item-card{
+    max-width: 50%;
+    padding: 30px;
+    padding-bottom: 0;
+}
+.main-item-text h1{
+    font-size: 36px;
+    font-weight: bold;
+}
+.main-item-card h1{
+    font-size: 36px;
+    font-weight: bold;
+}
+.main-item-title{
+    display: flex;
+}
+.main-item-layout{
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+.main-item-text{
+    margin-top: 100px;
+    /* margin-bottom: 15px; */
+}
+
+.main-item-card button{
+    min-width: 200px;
+    padding: 15px 25px;
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-size: 0.85em;
+}
+.main-item-text button{
+    min-width: 200px;
+    padding: 15px 25px;
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-size: 0.85em;
+}
+.terms-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+     
+}
+.text-button{
+    padding: 15px 25px;
+    /* font-size: 0.9rem; */
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1150px) {
+    main {
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    .main-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-item img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .main-item-card {
+        max-width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .title {
+        font-size: 2.5em;
+        margin-top: 50px;
+    }
+
+    .terms-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

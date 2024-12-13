@@ -436,3 +436,284 @@ img{
         width: 20px;
     }
 }
+main{
+    width: 1170px;
+    margin: 100px auto;
+}
+
+main > h1{
+    text-align: center;
+    margin-bottom: 100px;
+    font-weight: 800;
+    font-size: 2.9em;
+}
+
+.main-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 100px;
+}
+.main-items{
+    padding-top: 50px;
+}
+
+.main-item img {
+    max-width: 100%; 
+    width: 48em; 
+    transition: width 0.3s ease;
+}
+
+.main-item-text{
+    max-width: 50%;
+    padding: 30px;
+    padding-bottom: 0;
+}
+
+/* ---------------------------------------------------------- */
+
+.main-item-text h1{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.main-item-text p:nth-child(2){
+    font-size: 0.85;
+}
+.main-item-text p:nth-child(3){
+    font-size: 0.60em;
+}
+.main-item-text button{
+    min-width: 200px;
+    padding: 15px 25px;
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-size: 0.85em;
+}
+.column-layout {
+    display: flex;  
+    justify-content: start; 
+    gap: 20px;  
+}
+
+.main-item-box {
+    flex: 1; /* Ensure all columns are equal width */
+    max-width: auto; /* Limit each column's width */
+    text-align: start; /* Center align text and images */
+}
+
+.main-item-box img {
+    width: 100%; /* Make the image responsive */
+    height: auto;
+    margin-bottom: 40px; /*Add spacing below the image */
+}
+
+.main-item-box {
+    margin: 20px 0; /* Add spacing above and below */
+}
+/* .main-item-box p:nth-child(3){
+    font-size: 0.95;
+} */
+.main-item-box p:nth-child(4){
+    font-size: 0.60em;
+}
+.text{
+    font-size: 36px;
+    font-weight: bold;
+}
+/* ----------------------------------------------- */
+/* .main-item-title p:nth-child(3){
+    font-size: 0.85;
+} */
+.main-item-title p:nth-child(4){
+    font-size: 0.60em;
+}
+.main-item-title button{
+    min-width: 200px;
+    padding: 15px 25px;
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-size: 0.85em;
+}
+.main-item-title1{
+    padding-top: 60px;
+}
+/* ------------------------------------- */
+
+/* Responsive Design */
+/* For tablets and medium-sized screens (below 1024px) */
+@media (max-width: 1024px) {
+    main {
+        width: 90%; /* Reduce container width */
+        margin: 50px auto;
+    }
+
+    main > h1 {
+        font-size: 2.5em; /* Adjust heading size */
+        margin-bottom: 70px;
+    }
+
+    .main-item {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        margin-bottom: 70px;
+    }
+
+    .main-item img {
+        width: 100%; /* Full width for images */
+    }
+
+    .main-item-text {
+        max-width: 100%; /* Expand text to full width */
+        padding: 20px;
+    }
+}
+
+/* For mobile devices (below 768px) */
+@media (max-width: 768px) {
+    main {
+        width: 100%; /* Full width for the container */
+        margin: 30px auto;
+    }
+
+    main > h1 {
+        font-size: 2em; /* Adjust heading size further */
+        margin-bottom: 50px;
+    }
+
+    .main-item img {
+        width: 100%; /* Images take up full width */
+    }
+
+    .main-item-text {
+        padding: 15px; /* Reduce padding */
+    }
+
+    .main-item-text h1 {
+        font-size: 28px; /* Reduce heading size */
+    }
+
+    .main-item-text button {
+        width: 100%; /* Buttons take up full width */
+        font-size: 0.8em; /* Adjust button font size */
+    }
+}
+/* -------------------------------------------------- */
+
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: 100%; /* Required because we use flexbox and this inherently applies align-self: stretch*/
+}
+
+/* .card-img,
+.card-img-top {
+  border-top-left-radius: var(--card-inner-border-radius);
+  border-top-right-radius: var(--card-inner-border-radius);
+} */
+
+.card-img,
+.card-img-bottom {
+  border-bottom-left-radius: var(--card-inner-border-radius);
+  border-bottom-right-radius: var(--card-inner-border-radius);
+}
+
+/* //
+// Card groups
+// */
+
+.card-group {
+  /* Apply styles only for screen sizes above "sm" */
+  @media (min-width: 576px) {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+.card-group > .card {
+  flex: 1 0 0%;
+  margin-bottom: 0;
+}
+
+.card-group > .card + .card {
+  margin-left: 0;
+  border-left: 0;
+}
+/* 
+/* Handle rounded corners */
+.card-group > .card:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.card-group > .card:not(:last-child) .card-img-top,
+.card-group > .card:not(:last-child) .card-header {
+  border-top-right-radius: 0;
+}
+
+.card-group > .card:not(:last-child) .card-img-bottom,
+.card-group > .card:not(:last-child) .card-footer {
+  border-bottom-right-radius: 0;
+}
+
+.card-group > .card:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.card-group > .card:not(:first-child) .card-img-top,
+.card-group > .card:not(:first-child) .card-header {
+  border-top-left-radius: 0;
+}
+
+.card-group > .card:not(:first-child) .card-img-bottom,
+.card-group > .card:not(:first-child) .card-footer {
+  border-bottom-left-radius: 0;
+}
+
+.main-item-card {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Ensures content aligns vertically within the card */
+    width: 23rem; /* Ensures consistent width for all cards */
+    flex: 1; /* Allows equal height by flexbox behavior */
+}
+.card-img {
+    flex-grow: 1; /* Makes the image take up remaining space to fill the card */
+    object-fit: cover; /* Ensures the image covers its container without distortion */
+  }
+
+.card-title {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+button {
+  min-width: 200px;
+  padding: 15px 25px;
+  background-color: var(--yellow);
+  border: none;
+  border-radius: 5px;
+  margin-top: 30px;
+  font-size: 0.85em;
+}
+
+@media (max-width: 768px) {
+  .main-item-card {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: 100%;
+  }
+}
