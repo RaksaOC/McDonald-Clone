@@ -283,18 +283,18 @@ img{
     color: var(--black);
 }
 
-.search{
+.search-desktop{
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.search img{
+.search-desktop img{
     width: 20px;
     filter: grayscale(100);
 }
 
-.search a{
+.-desktop a{
     text-decoration: none;
     color: var(--black);
 }
