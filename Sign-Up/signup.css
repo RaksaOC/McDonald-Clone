@@ -209,13 +209,166 @@ img{
     border-radius: 5px;
 }
 /* ----------------------------------------------------------- */
-
-
+main {
+    width: 1170px;
+    margin: 100px auto;
+}
+.header h1 {
+    font-size: 2.9em;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+.sign-up-header {
+    width: 100%;
+    margin-bottom: 50px;
+}
+.sign-up-title {
+    margin-left: 205px;
+    margin-right: 175px;
+}
+.sign-up-header h1{
+    font-size: 2em;
+    font-weight: 700;
+    text-align: start;
+    margin-bottom: 30px;
+}
+.main-input-form {
+    margin-left: 205px;
+    margin-right: 175px;
+    margin-bottom: 80px;
+}
+.main-input-form p {
+    margin-bottom: 20px;
+}
+.small-text {
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
+form {
+    margin-bottom: 50px;
+}
+.form_group {
+    position: relative;
+} 
+.form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form_field {
+    position: relative;
+    margin-bottom: 60px;
+}
+.form_input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: none;
+    background: none;
+    font-size: inherit;
+    height: 50px;
+    width: 810px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 10px;
+    border-bottom: 1px solid grey;
+}
+.form_label {
+    position: absolute;
+    top: 0.8em;
+    transition: top 200ms ease-in,
+    left 200ms ease-in, font-size 200ms ease-in;
+}
+.form_input:focus ~ .form_label, 
+.form_input:not(:placeholder-shown).form_input:not(:focus)
+~.form_label{
+    top: -1.3em;
+    font-size: 10px;
+}
+.sign-up-btn button{
+    padding: 1em;
+    width: 140px;
+    border-radius: 0.5em;
+    background-color: var(--yellow);
+    border: 1px solid var(--yellow);
+    font-weight: 500;
+}
+.sign-up-reward{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.reward-content {
+    width: 100%;
+}
+.reward-content img {
+    width: 100%;
+    margin-right: 30px;   
+}
+.cropped {
+    display: none;
+}
+.reward-text {
+    width: 60%;
+    margin-left: 20px;
+}
+.reward-text h1 {
+    font-weight: 800;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+.reward-text p {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.small-text-1 {
+    font-size: 0.6em;
+    margin-bottom: 40px;
+}
+.free-mc-btn button{
+    background-color: var(--yellow);
+    border: 1px solid var(--yellow);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 90px;
+}
+.message h1 {
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+.item1 img{
+    width: 24em;
+    margin-bottom: 40px;
+}
+.item1 h1 {
+    margin-bottom: 20px;
+}
+.pic-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.all-item{
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+.reward-btn button {
+    width: 150px;
+    height: 50px;
+    background-color: var(--yellow);
+    border: 1px solid var(--yellow);
+    border-radius: 5px;
+}
 .footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1000px;
+    margin-top: 140px;
     padding: 15px;
     margin-bottom: 30px;
 }
@@ -435,4 +588,73 @@ img{
         display: block;
         width: 20px;
     }
+    .item {
+        flex-direction: column;
+    }
+    .item-img {
+        width: 100%;
+    }
+    .sign-up-reward {
+        flex-direction: column;
+        margin: 0;
+    }
+    .reward-content-img {
+        width: 100%;
+        padding: 5px;
+    }
+    .message{
+        padding: 2px;
+        margin: 0;
+    }
 }
+@media (max-width: 1200px) {
+    .sign-up-title {
+        margin: 0;
+        padding: 0 2px;
+    }
+    .main-input-form {
+        margin: 0;
+        padding: 0 2px;
+    }
+    .container {
+        margin: 0;
+    }
+    .sign-up-reward {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    .pic-wrapper {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    main {
+        margin: 0;
+        padding: 5px;
+        width: 100vw;
+    }
+    .cropped {
+        display: block;
+    }
+    .non-crop{
+        display: none;
+    }
+    .reward-text {
+        margin: 0; 
+        width: 100%;
+    }
+    .pic-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .all-item{
+        width: 100%;
+        padding: 5px;
+    }
+    .item1 img{
+        width: 100%;
+    }
+    .form_input {
+        width: 100%;
+    }
+}
+
