@@ -335,6 +335,13 @@ img{
     color: var(--black);
 }
 
+.delivery{
+    font-weight: bold;
+    box-sizing: border-box;
+    border-bottom: 4px solid rgb(217, 0, 0);
+    padding-top: 4px;
+}
+
 /* ----------------------------------------------------------- */
 
 .menu-dropdown-menu-wrapper{

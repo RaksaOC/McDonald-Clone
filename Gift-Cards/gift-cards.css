@@ -335,6 +335,12 @@ img{
     color: var(--black);
 }
 
+.gift-card{
+    font-weight: bold;
+    box-sizing: border-box;
+    border-bottom: 4px solid rgb(217, 0, 0);
+    padding-top: 4px;
+}
 /* ----------------------------------------------------------- */
 
 .menu-dropdown-menu-wrapper{
@@ -385,6 +391,8 @@ img{
     border: 1px solid;
     border-radius: 5px;
 }
+
+
 /* ----------------------------------------------------------- */
 
 
