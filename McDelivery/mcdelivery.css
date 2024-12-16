@@ -470,6 +470,54 @@ main > h1{
     padding-bottom: 0;
 }
 
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    main {
+        width: 90%;  
+        margin: 50px auto;  
+    }
+
+    .main-item {
+        flex-direction: column;  
+        align-items: center;
+    }
+
+    .main-item img {
+        width: 100%;  
+    }
+
+    .main-item-text {
+        max-width: 100%;  
+        padding: 20px;  
+    }
+
+    .main-item-text h1 {
+        font-size: 2.5em;  
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        margin: 30px auto; 
+    }
+
+    .main-item {
+        margin-bottom: 50px;  
+    }
+
+    .main-item-text h1 {
+        font-size: 1.8em; 
+    }
+
+    .main-item-text p {
+        font-size: 0.9em; 
+    }
+
+    .main-item-text button {
+        min-width: 150px;  
+    }
+}
+
 /* ---------------------------------------------------------- */
 
 .main-item-text h1{
@@ -481,7 +529,7 @@ main > h1{
     font-size: 0.85;
 }
 .main-item-text p:nth-child(3){
-    font-size: 0.60em;
+    font-size: 0.65em;
 }
 .main-item-text button{
     min-width: 200px;
@@ -499,36 +547,32 @@ main > h1{
 }
 
 .main-item-box {
-    flex: 1; /* Ensure all columns are equal width */
-    max-width: auto; /* Limit each column's width */
-    text-align: start; /* Center align text and images */
+    flex: 1;  
+    max-width: auto;  
+    text-align: start;  
 }
 
 .main-item-box img {
-    width: 100%; /* Make the image responsive */
+    width: 100%;  
     height: auto;
-    margin-bottom: 40px; /*Add spacing below the image */
+    margin-bottom: 40px; 
 }
 
 .main-item-box {
-    margin: 20px 0; /* Add spacing above and below */
+    margin: 20px 0;  
 }
-/* .main-item-box p:nth-child(3){
-    font-size: 0.95;
-} */
+
 .main-item-box p:nth-child(4){
-    font-size: 0.60em;
+    font-size: 0.65em;
 }
 .text{
     font-size: 36px;
     font-weight: bold;
 }
 /* ----------------------------------------------- */
-/* .main-item-title p:nth-child(3){
-    font-size: 0.85;
-} */
+ 
 .main-item-title p:nth-child(4){
-    font-size: 0.60em;
+    font-size: 0.65em;
 }
 .main-item-title button{
     min-width: 200px;
@@ -542,178 +586,158 @@ main > h1{
 .main-item-title1{
     padding-top: 60px;
 }
-/* ------------------------------------- */
 
-/* Responsive Design */
-/* For tablets and medium-sized screens (below 1024px) */
 @media (max-width: 1024px) {
-    main {
-        width: 90%; /* Reduce container width */
-        margin: 50px auto;
-    }
-
-    main > h1 {
-        font-size: 2.5em; /* Adjust heading size */
-        margin-bottom: 70px;
-    }
-
-    .main-item {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center;
-        margin-bottom: 70px;
-    }
-
-    .main-item img {
-        width: 100%; /* Full width for images */
-    }
-
-    .main-item-text {
-        max-width: 100%; /* Expand text to full width */
-        padding: 20px;
-    }
-}
-
-/* For mobile devices (below 768px) */
-@media (max-width: 768px) {
-    main {
-        width: 100%; /* Full width for the container */
-        margin: 30px auto;
-    }
-
-    main > h1 {
-        font-size: 2em; /* Adjust heading size further */
-        margin-bottom: 50px;
-    }
-
-    .main-item img {
-        width: 100%; /* Images take up full width */
-    }
-
-    .main-item-text {
-        padding: 15px; /* Reduce padding */
-    }
-
     .main-item-text h1 {
-        font-size: 28px; /* Reduce heading size */
+        font-size: 2.5em;  
+    }
+
+    .main-item-text p:nth-child(2) {
+        font-size: 0.75em;  
+    }
+
+    .main-item-text p:nth-child(3) {
+        font-size: 0.6em;  
     }
 
     .main-item-text button {
-        width: 100%; /* Buttons take up full width */
-        font-size: 0.8em; /* Adjust button font size */
+        min-width: 150px;  
     }
-}
-/* -------------------------------------------------- */
 
-.card-img,
-.card-img-top,
-.card-img-bottom {
-  width: 100%; /* Required because we use flexbox and this inherently applies align-self: stretch*/
-}
+    .column-layout {
+        flex-direction: column;  
+        align-items: center;  
+    }
 
-/* .card-img,
-.card-img-top {
-  border-top-left-radius: var(--card-inner-border-radius);
-  border-top-right-radius: var(--card-inner-border-radius);
-} */
-
-.card-img,
-.card-img-bottom {
-  border-bottom-left-radius: var(--card-inner-border-radius);
-  border-bottom-right-radius: var(--card-inner-border-radius);
-}
-
-/* //
-// Card groups
-// */
-
-.card-group {
-  /* Apply styles only for screen sizes above "sm" */
-  @media (min-width: 576px) {
-    display: flex;
-    flex-flow: row wrap;
-  }
-}
-
-.card-group > .card {
-  flex: 1 0 0%;
-  margin-bottom: 0;
-}
-
-.card-group > .card + .card {
-  margin-left: 0;
-  border-left: 0;
-}
-/* 
-/* Handle rounded corners */
-.card-group > .card:not(:last-child) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.card-group > .card:not(:last-child) .card-img-top,
-.card-group > .card:not(:last-child) .card-header {
-  border-top-right-radius: 0;
-}
-
-.card-group > .card:not(:last-child) .card-img-bottom,
-.card-group > .card:not(:last-child) .card-footer {
-  border-bottom-right-radius: 0;
-}
-
-.card-group > .card:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.card-group > .card:not(:first-child) .card-img-top,
-.card-group > .card:not(:first-child) .card-header {
-  border-top-left-radius: 0;
-}
-
-.card-group > .card:not(:first-child) .card-img-bottom,
-.card-group > .card:not(:first-child) .card-footer {
-  border-bottom-left-radius: 0;
-}
-
-.main-item-card {
-  display: flex;
-  gap: 20px;
-}
-
-.card {
-    display: flex;
-    flex-direction: column; /* Ensures content aligns vertically within the card */
-    width: 23rem; /* Ensures consistent width for all cards */
-    flex: 1; /* Allows equal height by flexbox behavior */
-}
-.card-img {
-    flex-grow: 1; /* Makes the image take up remaining space to fill the card */
-    object-fit: cover; /* Ensures the image covers its container without distortion */
-  }
-
-.card-title {
-  font-size: 1.3em;
-  font-weight: bold;
-}
-
-button {
-  min-width: 200px;
-  padding: 15px 25px;
-  background-color: var(--yellow);
-  border: none;
-  border-radius: 5px;
-  margin-top: 30px;
-  font-size: 0.85em;
+    .main-item-box {
+        max-width: 100%; 
+        margin: 10px 0; 
+    }
 }
 
 @media (max-width: 768px) {
-  .main-item-card {
-    flex-direction: column;
-  }
+    .main-item-text h1 {
+        font-size: 1.8em;  
+    }
+
+    .main-item-text p {
+        font-size: 0.8em;  
+    }
+
+    .main-item-text button {
+        min-width: 120px;  
+    }
+
+    .column-layout {
+        flex-direction: column;  
+        align-items: center;  
+    }
+
+    .main-item-box {
+        max-width: 100%; 
+        margin: 10px 0;  
+    }
+}
+/* ------------------------------------- */
+
+.main-item-card {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    background-size: cover;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 100px 12px 0px;   
+}
+.card{
+    border-radius: 5px;
+    flex: 1;
+    min-width: 200px;
+}
+.card img{
+    width: 100%;
+    height: 163px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 15px;
+}
+.card .card-text{
+    padding: 15px;
+    padding: 0 20px 0 30px;
+}
+.card .card-text h5{
+    margin-bottom: 28px;
+    font-weight: bold;
+    margin: 0px 0px 20px;
+}
+.card .card-text p:nth-child(2){
+    margin-bottom: 25px;
+}
+ 
+.card-text button{
+    min-width: 200px;
+    padding: 15px 25px;
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 5px;
+    font-size: 0.85em; 
+    margin-bottom: 30px;
+}
+.card-text .p2{
+    font-size: 0.65em;
+    margin-bottom: 26px;
+}
+.body-text{
+    width: 322.4px;
+    height: 183px;
+    margin-bottom: 25px;
 }
 
+/* Responsive Styles */
 @media (max-width: 1024px) {
-  .card {
-    width: 100%;
-  }
+    .main-item-card {
+        padding: 50px 12px; 
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 20px);  
+        margin-bottom: 20px; 
+    }
+
+    .card img {
+        height: auto;  
+    }
+
+    .card .card-text h5 {
+        font-size: 1.5em;  
+    }
+
+    .card-text button {
+        min-width: 150px;  
+    }
+}
+
+@media (max-width: 768px) {
+    .main-item-card {
+        padding: 30px 12px;  
+    }
+
+    .card {
+        flex: 1 1 100%;  
+        margin-bottom: 15px;  
+    }
+
+    .card .card-text h5 {
+        font-size: 1.2em;  
+    }
+
+    .card-text button {
+        min-width: 120px; 
+    }
+
+    .body-text {
+        width: 100%;  
+        height: auto;  
+    }
 }
